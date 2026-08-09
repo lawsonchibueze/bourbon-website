@@ -53,10 +53,10 @@ const Excellence = () => {
               className="group p-8 border-r border-b border-border animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <span className="font-serif text-lg text-brand-red">
+              <span className="font-serif text-lg text-brand">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <feature.icon className="w-6 h-6 text-navy mt-4 mb-4" />
+              <feature.icon className="w-6 h-6 text-brand mt-4 mb-4" />
               <h3 className="text-lg font-medium text-foreground mb-2">
                 {feature.title}
               </h3>

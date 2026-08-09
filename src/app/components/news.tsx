@@ -63,13 +63,13 @@ const News = () => {
                   alt={articles[0].title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-surface-strong via-surface-strong/50 to-transparent" />
 
                 {/* Content Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 text-navy-foreground">
+                <div className="absolute bottom-0 left-0 right-0 p-8 text-surface-strong-foreground">
                   <div className="flex items-center gap-4 mb-4 text-xs tracking-[0.15em] uppercase">
                     <span>{articles[0].category}</span>
-                    <span className="flex items-center text-navy-foreground/80">
+                    <span className="flex items-center text-surface-strong-foreground/80">
                       <Calendar className="w-3.5 h-3.5 mr-2" />
                       {articles[0].date}
                     </span>
@@ -77,12 +77,12 @@ const News = () => {
                   <h3 className="font-serif text-3xl mb-3">
                     {articles[0].title}
                   </h3>
-                  <p className="text-navy-foreground/85 mb-4 leading-relaxed">
+                  <p className="text-surface-strong-foreground/85 mb-4 leading-relaxed">
                     {articles[0].excerpt}
                   </p>
                   <Button
                     size="sm"
-                    className="bg-navy-foreground text-navy hover:bg-navy-foreground/90 cursor-pointer"
+                    className="bg-surface-strong-foreground text-surface-strong hover:bg-surface-strong-foreground/90 cursor-pointer"
                   >
                     Read More
                     <ArrowRight className="w-4 h-4" />
@@ -110,7 +110,7 @@ const News = () => {
               </div>
               <div className="p-6 space-y-3">
                 <div className="flex items-center gap-4 text-xs tracking-[0.15em] uppercase text-muted-foreground">
-                  <span className="text-navy font-medium">
+                  <span className="text-brand font-medium">
                     {article.category}
                   </span>
                   <span className="flex items-center">
@@ -118,7 +118,7 @@ const News = () => {
                     {article.date}
                   </span>
                 </div>
-                <h3 className="font-serif text-xl text-foreground group-hover:text-navy transition-colors">
+                <h3 className="font-serif text-xl text-foreground group-hover:text-brand transition-colors">
                   {article.title}
                 </h3>
                 <p className="text-muted-foreground text-sm">{article.excerpt}</p>

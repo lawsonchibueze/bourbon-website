@@ -71,9 +71,9 @@ const Fleet = () => {
                     className="w-full h-[400px] object-cover grayscale-[10%] transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Type Badge */}
-                  <div className="absolute top-0 left-0 bg-navy px-4 py-2 flex items-center gap-2">
-                    <vessel.icon className="w-4 h-4 text-navy-foreground" />
-                    <span className="text-xs tracking-[0.15em] uppercase font-medium text-navy-foreground">
+                  <div className="absolute top-0 left-0 bg-surface-strong px-4 py-2 flex items-center gap-2">
+                    <vessel.icon className="w-4 h-4 text-surface-strong-foreground" />
+                    <span className="text-xs tracking-[0.15em] uppercase font-medium text-surface-strong-foreground">
                       {vessel.type}
                     </span>
                   </div>
@@ -86,7 +86,7 @@ const Fleet = () => {
                   <h3 className="font-serif text-3xl text-foreground mb-2">
                     {vessel.name}
                   </h3>
-                  <p className="text-navy font-medium text-sm tracking-wide uppercase">
+                  <p className="text-brand font-medium text-sm tracking-wide uppercase">
                     {vessel.specs}
                   </p>
                 </div>

@@ -3,7 +3,8 @@ import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import Image from "next/image";
+import AlphaMark from "./alpha-mark";
+import ThemeToggle from "./theme-toggle";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,14 +32,8 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center gap-3">
-            <Image
-              width={66}
-              height={66}
-              src="/assets/logo-mark.png"
-              alt="Alpha logo"
-              className="h-8 w-8 object-contain"
-            />
+          <Link href="/" className="flex items-center gap-2">
+            <AlphaMark className="text-3xl" />
             <span className="font-serif text-xl tracking-wide text-foreground">
               ALPHA
             </span>
@@ -70,17 +65,18 @@ const Navigation = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center gap-3">
+            <ThemeToggle />
             <Button size="lg">CONTACT</Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X /> : <Menu />}
-          </button>
+          <div className="flex items-center gap-3 lg:hidden">
+            <ThemeToggle />
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}

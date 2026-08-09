@@ -53,14 +53,14 @@ const Testimonials = () => {
               className="relative p-8 border-r border-b border-border animate-fade-in"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              <span className="font-serif text-5xl text-navy/20 leading-none">
+              <span className="font-serif text-5xl text-brand/20 leading-none">
                 &ldquo;
               </span>
 
               {/* Rating */}
               <div className="flex gap-1 mb-4 -mt-2">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-navy text-navy" />
+                  <Star key={i} className="w-4 h-4 fill-brand text-brand" />
                 ))}
               </div>
 
@@ -77,7 +77,7 @@ const Testimonials = () => {
                 <p className="text-sm text-muted-foreground">
                   {testimonial.role}
                 </p>
-                <p className="text-sm text-navy font-medium">
+                <p className="text-sm text-brand font-medium">
                   {testimonial.company}
                 </p>
               </div>
