@@ -7,25 +7,19 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#01295d] relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
-      </div>
-
-      <div className="container mx-auto px-4 relative">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+    <section className="py-20 bg-navy">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-navy-foreground/15 border border-navy-foreground/15">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className="text-center animate-scale-in"
+              className="text-center py-10 px-4 animate-scale-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="text-4xl md:text-6xl font-bold text-white mb-2">
+              <div className="font-serif text-4xl md:text-5xl text-navy-foreground mb-2">
                 {stat.value}
               </div>
-              <div className="text-lg text-white/80 font-medium">
+              <div className="text-xs tracking-[0.15em] uppercase text-navy-foreground/70">
                 {stat.label}
               </div>
             </div>

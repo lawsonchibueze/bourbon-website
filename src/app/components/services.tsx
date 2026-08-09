@@ -26,29 +26,25 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 b">
+    <section className="py-24">
       <div className="container mx-auto px-4">
-   
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="grid md:grid-cols-12 gap-6 mb-16 animate-fade-in">
+          <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
+            Capabilities
+          </p>
+          <h2 className="md:col-span-7 font-serif text-4xl md:text-5xl text-foreground">
             Our Services
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="md:col-span-3 text-muted-foreground leading-relaxed">
             Delivering excellence in offshore marine services with safety,
             innovation, and reliability at our core.
           </p>
         </div>
 
-        {/* Service Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Service rows */}
+        <div>
           {services.map((service, index) => (
-            <div
-              key={service.title}
-              className="animate-fade-in"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              <ServiceCard {...service} />
-            </div>
+            <ServiceCard key={service.title} {...service} index={index} />
           ))}
         </div>
       </div>

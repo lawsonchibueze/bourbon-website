@@ -34,45 +34,46 @@ const Fleet = () => {
   ];
 
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section className="py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="grid md:grid-cols-12 gap-6 mb-16 animate-fade-in">
+          <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
+            Assets
+          </p>
+          <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
             Our Fleet
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="md:col-span-4 text-muted-foreground leading-relaxed">
             A diverse fleet of modern vessels equipped to handle any offshore
             challenge with reliability and precision.
           </p>
         </div>
 
-        {/* Fleet Cards */}
-        <div className="space-y-16">
+        {/* Fleet rows */}
+        <div className="divide-y divide-border border-y border-border">
           {vessels.map((vessel, index) => (
             <div
               key={vessel.type}
               className={`flex flex-col ${
                 index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-              } gap-8 items-center animate-fade-in`}
+              } gap-10 items-center py-16 animate-fade-in`}
               style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Image */}
-              <div className="lg:w-1/2 relative group">
-                <div className="relative overflow-hidden rounded-xl ">
+              <div className="lg:w-1/2 relative group w-full">
+                <div className="relative overflow-hidden">
                   <Image
                     width={1000}
                     height={1000}
                     src={vessel.image}
                     alt={vessel.name}
-                    className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-[400px] object-cover grayscale-[10%] transition-transform duration-700 group-hover:scale-105"
                   />
-                  {/* <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" /> */}
-
                   {/* Type Badge */}
-                  <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full flex items-center space-x-2">
-                    <vessel.icon className="w-5 h-5 text-primary" />
-                    <span className="font-bold text-primary">
+                  <div className="absolute top-0 left-0 bg-navy px-4 py-2 flex items-center gap-2">
+                    <vessel.icon className="w-4 h-4 text-navy-foreground" />
+                    <span className="text-xs tracking-[0.15em] uppercase font-medium text-navy-foreground">
                       {vessel.type}
                     </span>
                   </div>
@@ -82,17 +83,17 @@ const Fleet = () => {
               {/* Content */}
               <div className="lg:w-1/2 space-y-6">
                 <div>
-                  <h3 className="text-3xl font-bold text-foreground mb-2">
+                  <h3 className="font-serif text-3xl text-foreground mb-2">
                     {vessel.name}
                   </h3>
-                  <p className="text-primary font-semibold text-lg">
+                  <p className="text-navy font-medium text-sm tracking-wide uppercase">
                     {vessel.specs}
                   </p>
                 </div>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   {vessel.description}
                 </p>
-                <Button variant="default" size="lg" className="bg-[#01295d]">
+                <Button variant="outline" size="lg">
                   Explore Fleet Details
                 </Button>
               </div>

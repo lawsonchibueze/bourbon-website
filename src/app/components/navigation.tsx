@@ -28,34 +28,34 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
             <Image
-              width={1000}
-              height={1000}
+              width={160}
+              height={48}
               src="/assets/bour.png"
               alt="logo"
-              className="h-60 w-full object-cover"
+              className="h-9 w-auto object-contain"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-10">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
-                <button className="flex items-center space-x-1 text-foreground hover:text-primary transition-[var(--transition-smooth)] font-medium">
+                <button className="flex items-center gap-1.5 text-sm tracking-wide uppercase text-foreground hover:text-primary transition-colors font-medium">
                   <span>{item.label}</span>
-                  <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-[var(--transition-smooth)]" />
+                  <ChevronDown className="w-3.5 h-3.5 group-hover:rotate-180 transition-transform" />
                 </button>
-                <div className="absolute top-full left-0 mt-2 w-56 bg-card border border-border rounded-lg shadow-[var(--shadow-strong)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                  <div className="p-2">
+                <div className="absolute top-full left-0 mt-3 w-60 bg-background border border-border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div className="py-1">
                     {item.items.map((subItem) => (
                       <a
                         key={subItem}
                         href="#"
-                        className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-[var(--transition-smooth)]"
+                        className="block px-5 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-muted border-b border-border last:border-b-0 transition-colors"
                       >
                         {subItem}
                       </a>
@@ -68,9 +68,7 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button className="bg-[#cc0000] text-white" size="lg">
-              CONTACT
-            </Button>
+            <Button size="lg">CONTACT</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -84,16 +82,18 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 space-y-4 animate-fade-in">
+          <div className="lg:hidden py-6 space-y-6 border-t border-border">
             {navItems.map((item) => (
               <div key={item.label} className="space-y-2">
-                <h3 className="font-semibold text-foreground">{item.label}</h3>
+                <h3 className="text-sm tracking-wide uppercase font-medium text-foreground">
+                  {item.label}
+                </h3>
                 <div className="pl-4 space-y-2">
                   {item.items.map((subItem) => (
                     <a
                       key={subItem}
                       href="#"
-                      className="block text-sm text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]"
+                      className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {subItem}
                     </a>
@@ -101,7 +101,7 @@ const Navigation = () => {
                 </div>
               </div>
             ))}
-            <Button size="lg" className="w-full bg-[#cc0000]">
+            <Button size="lg" className="w-full">
               CONTACT
             </Button>
           </div>

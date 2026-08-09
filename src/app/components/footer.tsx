@@ -29,51 +29,51 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#01295d] text-white">
+    <footer className="bg-navy text-navy-foreground">
       <div className="container mx-auto px-4 py-16">
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-10 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <Link href="/" className="flex items-center space-x-2">
+            <div className="flex items-center mb-6">
+              <Link href="/" className="flex items-center">
                 <Image
-                  width={1000}
-                  height={1000}
+                  width={160}
+                  height={64}
                   src="/assets/logo.png"
                   alt="logo"
-                  className="h-20 w-auto object-cover"
+                  className="h-12 w-auto object-contain"
                 />
               </Link>
             </div>
-            <p className="text-white/80 mb-6 leading-relaxed">
+            <p className="text-navy-foreground/75 mb-6 leading-relaxed">
               Leading provider of marine services to the offshore oil and gas
               industry worldwide.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex gap-3">
               <a
                 href="https://www.facebook.com/bourbonoffshore/"
-                className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-[var(--transition-smooth)]"
+                className="w-9 h-9 border border-navy-foreground/25 hover:bg-navy-foreground/10 flex items-center justify-center transition-colors"
               >
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-[var(--transition-smooth)]"
+                className="w-9 h-9 border border-navy-foreground/25 hover:bg-navy-foreground/10 flex items-center justify-center transition-colors"
               >
-                <Twitter className="w-5 h-5" />
+                <Twitter className="w-4 h-4" />
               </a>
               <a
                 href="https://www.linkedin.com/company/bourbonrbonoffshore/"
-                className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-[var(--transition-smooth)]"
+                className="w-9 h-9 border border-navy-foreground/25 hover:bg-navy-foreground/10 flex items-center justify-center transition-colors"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-[var(--transition-smooth)]"
+                className="w-9 h-9 border border-navy-foreground/25 hover:bg-navy-foreground/10 flex items-center justify-center transition-colors"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -81,13 +81,15 @@ const Footer = () => {
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h3 className="font-bold text-lg mb-4">{title}</h3>
+              <h3 className="text-xs tracking-[0.15em] uppercase font-medium mb-4 text-navy-foreground/60">
+                {title}
+              </h3>
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-white/70 hover:text-white transition-[var(--transition-smooth)]"
+                      className="text-navy-foreground/85 hover:text-navy-foreground transition-colors"
                     >
                       {link}
                     </a>
@@ -99,31 +101,39 @@ const Footer = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="border-t border-white/10 pt-8 mb-8">
+        <div className="border-t border-navy-foreground/15 pt-8 mb-8">
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="flex items-start space-x-3">
-              <MapPin className="w-5 h-5 text-white/70 mt-1" />
+            <div className="flex items-start gap-3">
+              <MapPin className="w-4 h-4 text-navy-foreground/60 mt-1" />
               <div>
-                <h4 className="font-semibold mb-1">Head Office</h4>
-                <p className="text-white/70 text-sm">
+                <h4 className="text-xs tracking-[0.15em] uppercase font-medium mb-1 text-navy-foreground/60">
+                  Head Office
+                </h4>
+                <p className="text-navy-foreground/85 text-sm">
                   50, Rue de Forbin - CS 60703 -13235
                   <br />
                   Marseille Cedex 02 - France
                 </p>
               </div>
             </div>
-            <div className="flex items-start space-x-3">
-              <Phone className="w-5 h-5 text-white/70 mt-1" />
+            <div className="flex items-start gap-3">
+              <Phone className="w-4 h-4 text-navy-foreground/60 mt-1" />
               <div>
-                <h4 className="font-semibold mb-1">Phone</h4>
-                <p className="text-white/70 text-sm">+33 (0)4 91 13 08 00</p>
+                <h4 className="text-xs tracking-[0.15em] uppercase font-medium mb-1 text-navy-foreground/60">
+                  Phone
+                </h4>
+                <p className="text-navy-foreground/85 text-sm">
+                  +33 (0)4 91 13 08 00
+                </p>
               </div>
             </div>
-            <div className="flex items-start space-x-3">
-              <Mail className="w-5 h-5 text-white/70 mt-1" />
+            <div className="flex items-start gap-3">
+              <Mail className="w-4 h-4 text-navy-foreground/60 mt-1" />
               <div>
-                <h4 className="font-semibold mb-1">Email</h4>
-                <p className="text-white/70 text-sm">
+                <h4 className="text-xs tracking-[0.15em] uppercase font-medium mb-1 text-navy-foreground/60">
+                  Email
+                </h4>
+                <p className="text-navy-foreground/85 text-sm">
                   contact@bourbon-offshore.com
                 </p>
               </div>
@@ -132,26 +142,26 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-white/60 text-sm">
+        <div className="border-t border-navy-foreground/15 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-navy-foreground/60 text-sm">
             &copy; {new Date().getFullYear()} Bourbon. All rights reserved.
           </p>
-          <div className="flex space-x-6 text-sm">
+          <div className="flex gap-6 text-sm">
             <Link
               href="#"
-              className="text-white/60 hover:text-white transition-[var(--transition-smooth)]"
+              className="text-navy-foreground/60 hover:text-navy-foreground transition-colors"
             >
               Privacy
             </Link>
             <Link
               href="#"
-              className="text-white/60 hover:text-white transition-[var(--transition-smooth)]"
+              className="text-navy-foreground/60 hover:text-navy-foreground transition-colors"
             >
               Terms
             </Link>
             <Link
               href="#"
-              className="text-white/60 hover:text-white transition-[var(--transition-smooth)]"
+              className="text-navy-foreground/60 hover:text-navy-foreground transition-colors"
             >
               Cookies
             </Link>

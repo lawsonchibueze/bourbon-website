@@ -1,4 +1,4 @@
-import { Quote, Star } from "lucide-react";
+import { Star } from "lucide-react";
 
 const Testimonials = () => {
   const testimonials = [
@@ -29,56 +29,55 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="grid md:grid-cols-12 gap-6 mb-16 animate-fade-in">
+          <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
+            Testimonials
+          </p>
+          <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
             Trusted by Industry Leaders
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Don&apos;t just take our word for it—hear what our clients have to
-            say about their experience with Bourbon.
+          <p className="md:col-span-4 text-muted-foreground leading-relaxed">
+            Don&apos;t just take our word for it&mdash;hear what our clients
+            have to say about their experience with Bourbon.
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Testimonials */}
+        <div className="grid md:grid-cols-3 border-t border-l border-border">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.author}
-              className="relative p-8 bg-card rounded-2xl shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-medium)] transition-all duration-500 hover:-translate-y-1 animate-fade-in"
+              className="relative p-8 border-r border-b border-border animate-fade-in"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              {/* Quote Icon */}
-              <div className="absolute top-6 right-6 w-12 h-12 bg-[#01295d]/10 rounded-full flex items-center justify-center">
-                <Quote className="w-6 h-6 text-[#01295d]" />
-              </div>
+              <span className="font-serif text-5xl text-navy/20 leading-none">
+                &ldquo;
+              </span>
 
               {/* Rating */}
-              <div className="flex space-x-1 mb-4">
+              <div className="flex gap-1 mb-4 -mt-2">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 fill-accent text-[#cc0000]"
-                  />
+                  <Star key={i} className="w-4 h-4 fill-navy text-navy" />
                 ))}
               </div>
 
               {/* Quote */}
-              <p className="text-muted-foreground leading-relaxed mb-6 italic">
-                &quot;{testimonial.quote}&quot;
+              <p className="text-foreground leading-relaxed mb-8">
+                {testimonial.quote}
               </p>
 
               {/* Author */}
               <div className="border-t border-border pt-4">
-                <p className="font-bold text-foreground">
+                <p className="font-medium text-foreground">
                   {testimonial.author}
                 </p>
                 <p className="text-sm text-muted-foreground">
                   {testimonial.role}
                 </p>
-                <p className="text-sm text-[#01295d] font-medium">
+                <p className="text-sm text-navy font-medium">
                   {testimonial.company}
                 </p>
               </div>

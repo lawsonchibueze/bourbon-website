@@ -7,32 +7,34 @@ interface ServiceCardProps {
   title: string;
   description: string;
   link: string;
+  index: number;
 }
 
-const ServiceCard = ({ image, title, description }: ServiceCardProps) => {
+const ServiceCard = ({ image, title, description, index }: ServiceCardProps) => {
   return (
-    <div className="group relative overflow-hidden rounded-xl bg-card shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-strong)] transition-all duration-500 hover:-translate-y-2">
-      <div className="relative h-64 overflow-hidden">
+    <div className="group grid md:grid-cols-12 gap-6 md:gap-10 items-center border-t border-border py-10 first:border-t-0 md:first:border-t md:first:pt-0">
+      <div className="md:col-span-1">
+        <span className="font-serif text-2xl text-muted-foreground">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+      </div>
+      <div className="md:col-span-4 relative h-56 overflow-hidden">
         <Image
           width={1000}
           height={1000}
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full object-cover grayscale-[15%] transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
       </div>
-
-      {/* Content */}
-      <div className="p-6 space-y-4">
-        <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-[var(--transition-smooth)]">
+      <div className="md:col-span-7 space-y-4">
+        <h3 className="font-serif text-2xl md:text-3xl text-foreground">
           {title}
         </h3>
-        <p className="text-muted-foreground leading-relaxed">{description}</p>
-        <Button
-          variant="ghost"
-          className="group-hover:text-primary transition-[var(--transition-smooth)] px-0"
-        >
+        <p className="text-muted-foreground leading-relaxed max-w-xl">
+          {description}
+        </p>
+        <Button variant="link" className="px-0 text-foreground">
           Learn More
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </Button>
