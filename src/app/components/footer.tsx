@@ -35,15 +35,18 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-10 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <div className="flex items-center mb-6">
-              <Link href="/" className="flex items-center">
+            <div className="flex items-center gap-3 mb-6">
+              <Link href="/" className="flex items-center gap-3">
                 <Image
-                  width={160}
-                  height={64}
-                  src="/assets/logo.png"
-                  alt="logo"
-                  className="h-12 w-auto object-contain"
+                  width={66}
+                  height={66}
+                  src="/assets/logo-mark.png"
+                  alt="Alpha logo"
+                  className="h-10 w-10 object-contain"
                 />
+                <span className="font-serif text-2xl tracking-wide">
+                  ALPHA
+                </span>
               </Link>
             </div>
             <p className="text-navy-foreground/75 mb-6 leading-relaxed">
@@ -52,7 +55,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://www.facebook.com/bourbonoffshore/"
+                href="#"
                 className="w-9 h-9 border border-navy-foreground/25 hover:bg-navy-foreground/10 flex items-center justify-center transition-colors"
               >
                 <Facebook className="w-4 h-4" />
@@ -64,7 +67,7 @@ const Footer = () => {
                 <Twitter className="w-4 h-4" />
               </a>
               <a
-                href="https://www.linkedin.com/company/bourbonrbonoffshore/"
+                href="#"
                 className="w-9 h-9 border border-navy-foreground/25 hover:bg-navy-foreground/10 flex items-center justify-center transition-colors"
               >
                 <Linkedin className="w-4 h-4" />
@@ -134,7 +137,7 @@ const Footer = () => {
                   Email
                 </h4>
                 <p className="text-navy-foreground/85 text-sm">
-                  contact@bourbon-offshore.com
+                  contact@alpha-offshore.com
                 </p>
               </div>
             </div>
@@ -144,7 +147,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-navy-foreground/15 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-navy-foreground/60 text-sm">
-            &copy; {new Date().getFullYear()} Bourbon. All rights reserved.
+            &copy; {new Date().getFullYear()} Alpha. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <Link

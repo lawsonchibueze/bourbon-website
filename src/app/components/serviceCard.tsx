@@ -14,7 +14,7 @@ const ServiceCard = ({ image, title, description, index }: ServiceCardProps) => 
   return (
     <div className="group grid md:grid-cols-12 gap-6 md:gap-10 items-center border-t border-border py-10 first:border-t-0 md:first:border-t md:first:pt-0">
       <div className="md:col-span-1">
-        <span className="font-serif text-2xl text-muted-foreground">
+        <span className="font-serif text-2xl text-brand-red">
           {String(index + 1).padStart(2, "0")}
         </span>
       </div>

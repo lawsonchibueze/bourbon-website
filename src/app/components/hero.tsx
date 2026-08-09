@@ -21,8 +21,8 @@ const Hero = () => {
       <div className="relative h-full flex items-end">
         <div className="container mx-auto px-4 pb-24">
           <div className="max-w-4xl animate-fade-in">
-            <p className="text-sm tracking-[0.2em] uppercase text-navy-foreground/70 mb-6 border-l-2 border-navy-foreground/40 pl-4">
-              Bourbon &mdash; Marine &amp; Offshore Services
+            <p className="text-sm tracking-[0.2em] uppercase text-navy-foreground/70 mb-6 border-l-2 border-brand-red pl-4">
+              Alpha &mdash; Marine &amp; Offshore Services
             </p>
             <h1 className="font-serif text-5xl md:text-7xl font-medium text-navy-foreground mb-6 leading-[1.05]">
               &quot;Crew stories&quot;: the podcast that gives a voice to our

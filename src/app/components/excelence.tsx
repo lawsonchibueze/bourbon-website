@@ -34,10 +34,10 @@ const Excellence = () => {
         {/* Section Header */}
         <div className="grid md:grid-cols-12 gap-6 mb-16 animate-fade-in">
           <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
-            Why Bourbon
+            Why Alpha
           </p>
           <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
-            Why Choose Bourbon
+            Why Choose Alpha
           </h2>
           <p className="md:col-span-4 text-muted-foreground leading-relaxed">
             Leading the offshore marine industry with unwavering commitment to
@@ -53,7 +53,7 @@ const Excellence = () => {
               className="group p-8 border-r border-b border-border animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <span className="font-serif text-lg text-muted-foreground">
+              <span className="font-serif text-lg text-brand-red">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <feature.icon className="w-6 h-6 text-navy mt-4 mb-4" />

@@ -20,7 +20,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Bourbon",
+  title: "Alpha",
   description:
     "Delivering excellence in offshore marine services with safety, innovation, and reliability at our core.",
 };

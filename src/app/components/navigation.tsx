@@ -31,14 +31,17 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-3">
             <Image
-              width={160}
-              height={48}
-              src="/assets/bour.png"
-              alt="logo"
-              className="h-9 w-auto object-contain"
+              width={66}
+              height={66}
+              src="/assets/logo-mark.png"
+              alt="Alpha logo"
+              className="h-8 w-8 object-contain"
             />
+            <span className="font-serif text-xl tracking-wide text-foreground">
+              ALPHA
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -4,7 +4,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote:
-        "Bourbon's reliability and professionalism have been instrumental in our offshore operations. Their commitment to safety and on-time delivery is unmatched in the industry.",
+        "Alpha's reliability and professionalism have been instrumental in our offshore operations. Their commitment to safety and on-time delivery is unmatched in the industry.",
       author: "Sarah Mitchell",
       role: "Operations Director",
       company: "Global Energy Corp",
@@ -12,7 +12,7 @@ const Testimonials = () => {
     },
     {
       quote:
-        "The technical expertise and innovative solutions provided by Bourbon have significantly improved our operational efficiency. They're truly partners in our success.",
+        "The technical expertise and innovative solutions provided by Alpha have significantly improved our operational efficiency. They're truly partners in our success.",
       author: "James Chen",
       role: "Project Manager",
       company: "Offshore Solutions Ltd",
@@ -20,7 +20,7 @@ const Testimonials = () => {
     },
     {
       quote:
-        "Working with Bourbon has been exceptional. Their crew's professionalism and the quality of their vessels consistently exceed our expectations on every project.",
+        "Working with Alpha has been exceptional. Their crew's professionalism and the quality of their vessels consistently exceed our expectations on every project.",
       author: "Maria Rodriguez",
       role: "Supply Chain Director",
       company: "Atlantic Energy Partners",
@@ -41,7 +41,7 @@ const Testimonials = () => {
           </h2>
           <p className="md:col-span-4 text-muted-foreground leading-relaxed">
             Don&apos;t just take our word for it&mdash;hear what our clients
-            have to say about their experience with Bourbon.
+            have to say about their experience with Alpha.
           </p>
         </div>
 
