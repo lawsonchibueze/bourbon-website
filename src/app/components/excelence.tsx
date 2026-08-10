@@ -29,7 +29,10 @@ const Excellence = () => {
   ];
 
   return (
-    <section className="py-24 bg-secondary/60 border-y border-border">
+    <section
+      id="excellence"
+      className="py-24 bg-secondary/60 border-y border-border scroll-mt-20"
+    >
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="grid md:grid-cols-12 gap-6 mb-16 animate-fade-in">

@@ -12,19 +12,39 @@ const Navigation = () => {
   const navItems = [
     {
       label: "Services",
-      items: ["Marine & Logistics", "Subsea Operations", "Passenger Mobility"],
+      href: "/services",
+      items: [
+        { label: "Marine & Logistics", href: "/services#marine" },
+        { label: "Subsea Operations", href: "/services#subsea" },
+        { label: "Passenger Mobility", href: "/services#passenger" },
+      ],
     },
     {
       label: "Group",
-      items: ["About Us", "Leadership", "Locations"],
+      href: "/group",
+      items: [
+        { label: "About Us", href: "/group#about" },
+        { label: "Leadership", href: "/group#leadership" },
+        { label: "Locations", href: "/group#locations" },
+      ],
     },
     {
       label: "Careers",
-      items: ["Job Opportunities", "Life at Sea", "Training"],
+      href: "/careers",
+      items: [
+        { label: "Job Opportunities", href: "/careers#jobs" },
+        { label: "Life at Sea", href: "/careers#life-at-sea" },
+        { label: "Training", href: "/careers#training" },
+      ],
     },
     {
       label: "News & Media",
-      items: ["Latest News", "Press Releases", "Media Kit"],
+      href: "/news",
+      items: [
+        { label: "Latest News", href: "/news#latest" },
+        { label: "Press Releases", href: "/news#press" },
+        { label: "Media Kit", href: "/news#media-kit" },
+      ],
     },
   ];
 
@@ -43,20 +63,23 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center space-x-10">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
-                <button className="flex items-center gap-1.5 text-sm tracking-wide uppercase text-foreground hover:text-primary transition-colors font-medium">
+                <Link
+                  href={item.href}
+                  className="flex items-center gap-1.5 text-sm tracking-wide uppercase text-foreground hover:text-primary transition-colors font-medium"
+                >
                   <span>{item.label}</span>
                   <ChevronDown className="w-3.5 h-3.5 group-hover:rotate-180 transition-transform" />
-                </button>
+                </Link>
                 <div className="absolute top-full left-0 mt-3 w-60 bg-background border border-border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                   <div className="py-1">
                     {item.items.map((subItem) => (
-                      <a
-                        key={subItem}
-                        href="#"
+                      <Link
+                        key={subItem.label}
+                        href={subItem.href}
                         className="block px-5 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-muted border-b border-border last:border-b-0 transition-colors"
                       >
-                        {subItem}
-                      </a>
+                        {subItem.label}
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -67,7 +90,9 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-3">
             <ThemeToggle />
-            <Button size="lg">CONTACT</Button>
+            <Button size="lg" asChild>
+              <Link href="/contact">CONTACT</Link>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -84,24 +109,31 @@ const Navigation = () => {
           <div className="lg:hidden py-6 space-y-6 border-t border-border">
             {navItems.map((item) => (
               <div key={item.label} className="space-y-2">
-                <h3 className="text-sm tracking-wide uppercase font-medium text-foreground">
+                <Link
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block text-sm tracking-wide uppercase font-medium text-foreground"
+                >
                   {item.label}
-                </h3>
+                </Link>
                 <div className="pl-4 space-y-2">
                   {item.items.map((subItem) => (
-                    <a
-                      key={subItem}
-                      href="#"
+                    <Link
+                      key={subItem.label}
+                      href={subItem.href}
+                      onClick={() => setIsMenuOpen(false)}
                       className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      {subItem}
-                    </a>
+                      {subItem.label}
+                    </Link>
                   ))}
                 </div>
               </div>
             ))}
-            <Button size="lg" className="w-full">
-              CONTACT
+            <Button size="lg" className="w-full" asChild>
+              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+                CONTACT
+              </Link>
             </Button>
           </div>
         )}

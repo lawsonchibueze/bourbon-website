@@ -13,18 +13,28 @@ import AlphaMark from "./alpha-mark";
 const Footer = () => {
   const footerLinks = {
     Services: [
-      "Marine & Logistics",
-      "Subsea Operations",
-      "Passenger Mobility",
-      "Fleet Overview",
+      { label: "Marine & Logistics", href: "/services#marine" },
+      { label: "Subsea Operations", href: "/services#subsea" },
+      { label: "Passenger Mobility", href: "/services#passenger" },
+      { label: "Fleet Overview", href: "/#fleet" },
     ],
-    Company: ["About Us", "Leadership", "Locations", "Careers"],
-    Resources: ["News & Media", "Sustainability", "Safety", "Innovation"],
+    Company: [
+      { label: "About Us", href: "/group#about" },
+      { label: "Leadership", href: "/group#leadership" },
+      { label: "Locations", href: "/group#locations" },
+      { label: "Careers", href: "/careers" },
+    ],
+    Resources: [
+      { label: "News & Media", href: "/news" },
+      { label: "Sustainability", href: "/#excellence" },
+      { label: "Safety", href: "/#excellence" },
+      { label: "Innovation", href: "/#excellence" },
+    ],
     Legal: [
-      "Privacy Policy",
-      "Terms of Service",
-      "Cookie Policy",
-      "Compliance",
+      { label: "Privacy Policy", href: "#" },
+      { label: "Terms of Service", href: "#" },
+      { label: "Cookie Policy", href: "#" },
+      { label: "Compliance", href: "#" },
     ],
   };
 
@@ -83,13 +93,13 @@ const Footer = () => {
               </h3>
               <ul className="space-y-2">
                 {links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
                       className="text-surface-strong-foreground/85 hover:text-surface-strong-foreground transition-colors"
                     >
-                      {link}
-                    </a>
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>

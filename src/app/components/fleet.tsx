@@ -34,7 +34,10 @@ const Fleet = () => {
   ];
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section
+      id="fleet"
+      className="py-24 bg-background relative overflow-hidden scroll-mt-20"
+    >
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
         <div className="grid md:grid-cols-12 gap-6 mb-16 animate-fade-in">
