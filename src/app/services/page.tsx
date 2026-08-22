@@ -9,13 +9,13 @@ import { Button } from "../components/ui/button";
 export const metadata: Metadata = {
   title: "Services | Alpha",
   description:
-    "Marine & logistics, subsea operations, and passenger mobility services delivered across the global offshore energy industry.",
+    "Marine logistics, crew transportation, internal maritime training, and subsea operations services delivered across the global offshore energy industry.",
 };
 
 const services = [
   {
     id: "marine",
-    title: "Marine & Logistics",
+    title: "Marine Logistics",
     image: "/assets/marine-logistics.jpg",
     description:
       "Comprehensive offshore support vessel services including supply, anchor handling, and platform support for the global energy industry. Our fleet operates around the clock to keep offshore installations supplied, secured, and moving.",
@@ -28,6 +28,40 @@ const services = [
     stats: [
       { value: "223", label: "Vessels in service" },
       { value: "37", label: "Countries served" },
+    ],
+  },
+  {
+    id: "crew",
+    title: "Crew Transportation",
+    image: "/assets/passenger-mobility.jpg",
+    description:
+      "Safe and efficient crew transfer services connecting offshore installations with onshore facilities across the globe, engineered around comfort, punctuality, and safety at every handover.",
+    capabilities: [
+      "Crew transfer vessel (CTV) operations",
+      "Walk-to-work gangway systems",
+      "Offshore accommodation logistics",
+      "24/7 scheduling & dispatch coordination",
+    ],
+    stats: [
+      { value: "24/7", label: "Crew transfer coverage" },
+      { value: "98%", label: "On-time departure rate" },
+    ],
+  },
+  {
+    id: "training",
+    title: "Internal Maritime Training",
+    image: "/assets/maritime-training.jpg",
+    description:
+      "Alpha's internal training academy prepares crew and offshore personnel to the highest standards of safety and technical competence. From STCW-aligned certification to simulator-based technical instruction, we build the skills our fleet runs on and offer that same rigor to clients building out their own offshore workforce.",
+    capabilities: [
+      "STCW-aligned safety & survival training",
+      "Simulator-based technical & DP training",
+      "Cadet-to-officer development pathways",
+      "Ongoing certification & recertification programs",
+    ],
+    stats: [
+      { value: "40+", label: "Years of experience" },
+      { value: "100%", label: "STCW-aligned crew" },
     ],
   },
   {
@@ -45,23 +79,6 @@ const services = [
     stats: [
       { value: "40+", label: "Years of experience" },
       { value: "150+", label: "Subsea missions / yr" },
-    ],
-  },
-  {
-    id: "passenger",
-    title: "Passenger Mobility",
-    image: "/assets/passenger-mobility.jpg",
-    description:
-      "Safe and efficient crew transfer services connecting offshore installations with onshore facilities across the globe, engineered around comfort, punctuality, and safety at every handover.",
-    capabilities: [
-      "Crew transfer vessel (CTV) operations",
-      "Walk-to-work gangway systems",
-      "Offshore accommodation logistics",
-      "24/7 scheduling & dispatch coordination",
-    ],
-    stats: [
-      { value: "24/7", label: "Crew transfer coverage" },
-      { value: "98%", label: "On-time departure rate" },
     ],
   },
 ];

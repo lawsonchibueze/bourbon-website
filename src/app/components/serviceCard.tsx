@@ -10,7 +10,7 @@ interface ServiceCardProps {
   index: number;
 }
 
-const ServiceCard = ({ image, title, description, index }: ServiceCardProps) => {
+const ServiceCard = ({ image, title, description, link, index }: ServiceCardProps) => {
   return (
     <div className="group grid md:grid-cols-12 gap-6 md:gap-10 items-center border-t border-border py-10 first:border-t-0 md:first:border-t md:first:pt-0">
       <div className="md:col-span-1">
@@ -34,9 +34,11 @@ const ServiceCard = ({ image, title, description, index }: ServiceCardProps) => 
         <p className="text-muted-foreground leading-relaxed max-w-xl">
           {description}
         </p>
-        <Button variant="link" className="px-0 text-foreground">
-          Learn More
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        <Button variant="link" className="px-0 text-foreground" asChild>
+          <a href={link}>
+            Learn More
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </a>
         </Button>
       </div>
     </div>

@@ -96,8 +96,8 @@ const Fleet = () => {
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   {vessel.description}
                 </p>
-                <Button variant="outline" size="lg">
-                  Explore Fleet Details
+                <Button variant="outline" size="lg" asChild>
+                  <a href="/fleet">Explore Fleet Details</a>
                 </Button>
               </div>
             </div>

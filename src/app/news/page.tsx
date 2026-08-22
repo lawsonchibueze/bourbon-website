@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, Download, FileText } from "lucide-react";
+import { ArrowRight, CalendarDays, FileText } from "lucide-react";
 import Image from "next/image";
 import type { Metadata } from "next";
 import Footer from "../components/footer";
@@ -9,59 +9,8 @@ import { Button } from "../components/ui/button";
 export const metadata: Metadata = {
   title: "News & Media | Alpha",
   description:
-    "Latest news, press releases, and media resources from Alpha's global marine services operations.",
+    "Press releases, upcoming events, and a photo gallery from Alpha's global marine services operations.",
 };
-
-const articles = [
-  {
-    image: "/assets/news-image.png",
-    category: "People & Culture",
-    date: "March 15, 2025",
-    title: "Celebrating Excellence: Our Crew Members' Stories",
-    excerpt:
-      "Meet the dedicated professionals behind our success as we highlight their achievements and commitment to maritime excellence.",
-  },
-  {
-    image: "/assets/bour-6.jpeg",
-    category: "Operations",
-    date: "March 10, 2025",
-    title: "Expanding Our Presence in the Gulf of Mexico",
-    excerpt:
-      "New contract wins strengthen our position as the leading offshore service provider in key energy markets.",
-  },
-  {
-    image: "/assets/bour-9.jpeg",
-    category: "Innovation",
-    date: "March 5, 2025",
-    title: "Pioneering Subsea Technology for Deeper Waters",
-    excerpt:
-      "Investment in next-generation ROV systems enables operations at unprecedented depths with enhanced safety.",
-  },
-  {
-    image: "/assets/bour-7.jpeg",
-    category: "Sustainability",
-    date: "February 20, 2025",
-    title: "Alpha Adds Two Hybrid-Powered PSVs to the Fleet",
-    excerpt:
-      "New low-emission platform supply vessels mark another step toward a cleaner offshore support fleet.",
-  },
-  {
-    image: "/assets/bour-4.jpeg",
-    category: "Safety",
-    date: "February 8, 2025",
-    title: "Ten Million Hours Without a Lost-Time Incident",
-    excerpt:
-      "A fleet-wide safety milestone reflects the discipline and training of crews across every region we operate in.",
-  },
-  {
-    image: "/assets/bour-2.jpeg",
-    category: "Operations",
-    date: "January 22, 2025",
-    title: "New Long-Term Charter Agreement in the North Sea",
-    excerpt:
-      "A multi-year agreement extends our support of offshore wind and energy operators across the region.",
-  },
-];
 
 const pressReleases = [
   {
@@ -82,11 +31,40 @@ const pressReleases = [
   },
 ];
 
-const mediaKitItems = [
-  { label: "Brand & Logo Guidelines", type: "PDF" },
-  { label: "Company Fact Sheet", type: "PDF" },
-  { label: "Executive Bios & Headshots", type: "ZIP" },
-  { label: "Fleet Photography Library", type: "ZIP" },
+const events = [
+  {
+    date: "September 9-11, 2026",
+    title: "Offshore Safety Summit — Aberdeen",
+  },
+  {
+    date: "October 6, 2026",
+    title: "Alpha Fleet Open Day — Marseille Terminal",
+  },
+  {
+    date: "November 3-5, 2026",
+    title: "Global Marine Logistics Conference — Singapore",
+  },
+  {
+    date: "December 1, 2026",
+    title: "Training Academy Graduation — Class of 2026",
+  },
+  {
+    date: "January 20, 2027",
+    title: "Subsea Technology & Innovation Forum — Houston",
+  },
+];
+
+const galleryImages = [
+  "/assets/bour-1.jpeg",
+  "/assets/bour-2.jpeg",
+  "/assets/bour-3.jpeg",
+  "/assets/bour-4.jpeg",
+  "/assets/bour-5.jpeg",
+  "/assets/bour-6.jpeg",
+  "/assets/bour-7.jpeg",
+  "/assets/bour-8.jpeg",
+  "/assets/bour-9.jpeg",
+  "/assets/bour-10.jpeg",
 ];
 
 export default function NewsPage() {
@@ -96,62 +74,8 @@ export default function NewsPage() {
       <PageHeader
         eyebrow="Newsroom"
         title="News & Media"
-        description="Company news, press releases, and media resources from across the Alpha group."
+        description="Press releases, events, and a photo gallery from across the Alpha group."
       />
-
-      {/* Latest News */}
-      <section id="latest" className="py-24 scroll-mt-20">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-12 gap-6 mb-16">
-            <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
-              Newsroom
-            </p>
-            <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
-              Latest News
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
-            {articles.map((article) => (
-              <div
-                key={article.title}
-                className="group bg-background overflow-hidden"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    width={1000}
-                    height={1000}
-                    src={article.image}
-                    alt={article.title}
-                    className="w-full h-full object-cover grayscale-[10%] transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6 space-y-3">
-                  <div className="flex items-center gap-4 text-xs tracking-[0.15em] uppercase text-muted-foreground">
-                    <span className="text-brand font-medium">
-                      {article.category}
-                    </span>
-                    <span className="flex items-center">
-                      <Calendar className="w-3.5 h-3.5 mr-2" />
-                      {article.date}
-                    </span>
-                  </div>
-                  <h3 className="font-serif text-xl text-foreground group-hover:text-brand transition-colors">
-                    {article.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {article.excerpt}
-                  </p>
-                  <Button size="sm" className="cursor-pointer">
-                    Read More
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Press Releases */}
       <section
@@ -195,38 +119,81 @@ export default function NewsPage() {
         </div>
       </section>
 
-      {/* Media Kit */}
-      <section id="media-kit" className="py-24 scroll-mt-20">
+      {/* Events */}
+      <section id="events" className="py-24 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-12 gap-6 mb-16">
             <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
-              Resources
+              Calendar
             </p>
             <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
-              Media Kit
+              Events
             </h2>
             <p className="md:col-span-4 text-muted-foreground leading-relaxed">
-              Logos, fact sheets, and imagery for journalists and media
-              partners. For interview requests, reach the press office via
-              our{" "}
-              <a href="/contact" className="text-brand underline">
-                contact page
-              </a>
-              .
+              Illustrative events shown for site design purposes only &mdash;
+              our calendar is updated regularly with industry summits,
+              conferences, and fleet activities.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 border-t border-l border-border">
-            {mediaKitItems.map((item) => (
+          <div className="border-t border-border">
+            {events.map((event) => (
               <div
-                key={item.label}
-                className="flex items-center justify-between gap-4 border-r border-b border-border p-6"
+                key={event.title}
+                className="group flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-border py-6"
               >
-                <span className="text-foreground">{item.label}</span>
-                <span className="flex items-center gap-2 text-xs tracking-[0.15em] uppercase text-muted-foreground">
-                  <Download className="w-4 h-4" />
-                  {item.type}
-                </span>
+                <div className="flex items-start gap-4">
+                  <CalendarDays className="w-5 h-5 text-brand mt-1 shrink-0" />
+                  <div>
+                    <p className="text-xs tracking-[0.15em] uppercase text-muted-foreground mb-1">
+                      {event.date}
+                    </p>
+                    <p className="font-medium text-foreground group-hover:text-brand transition-colors">
+                      {event.title}
+                    </p>
+                  </div>
+                </div>
+                <Button variant="link" className="px-0 md:px-4 text-foreground shrink-0">
+                  View Details
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery */}
+      <section
+        id="gallery"
+        className="py-24 scroll-mt-20 bg-secondary/60 border-y border-border"
+      >
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-12 gap-6 mb-16">
+            <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
+              Gallery
+            </p>
+            <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
+              Photo Gallery
+            </h2>
+            <p className="md:col-span-4 text-muted-foreground leading-relaxed">
+              A look at our fleet and crews at work across the world&apos;s
+              offshore energy markets.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-border border border-border">
+            {galleryImages.map((image, index) => (
+              <div
+                key={image}
+                className="group relative aspect-square overflow-hidden"
+              >
+                <Image
+                  fill
+                  src={image}
+                  alt={`Alpha fleet and crew photo ${index + 1}`}
+                  className="object-cover grayscale-[10%] transition-transform duration-700 group-hover:scale-105"
+                />
               </div>
             ))}
           </div>

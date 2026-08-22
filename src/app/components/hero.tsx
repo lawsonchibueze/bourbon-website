@@ -41,9 +41,12 @@ const Hero = () => {
               <Button
                 size="lg"
                 className="text-sm px-8 py-6 h-auto bg-surface-strong-foreground text-surface-strong hover:bg-surface-strong-foreground/90"
+                asChild
               >
-                Explore Our Services
-                <ArrowRight className="w-4 h-4" />
+                <a href="/services">
+                  Explore Our Services
+                  <ArrowRight className="w-4 h-4" />
+                </a>
               </Button>
             </div>
           </div>

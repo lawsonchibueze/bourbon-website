@@ -39,7 +39,7 @@ const openRoles = [
   },
   {
     title: "Crew Transfer Vessel Master",
-    department: "Passenger Mobility",
+    department: "Crew Transportation",
     location: "Esbjerg, Denmark",
     type: "Contract",
   },
@@ -63,7 +63,7 @@ export default function CareersPage() {
               Open Roles
             </p>
             <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
-              Job Opportunities
+              Current Vacancies
             </h2>
             <p className="md:col-span-4 text-muted-foreground leading-relaxed">
               Illustrative openings shown for site design purposes &mdash;
@@ -114,7 +114,7 @@ export default function CareersPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
               <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground">
-                Life at Sea
+                Working at Alpha
               </p>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground">
                 A career unlike any other

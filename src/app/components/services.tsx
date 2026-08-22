@@ -3,25 +3,32 @@ import ServiceCard from "./serviceCard";
 const Services = () => {
   const services = [
     {
-      image: "/assets/bour.jpeg",
-      title: "Marine & Logistics",
+      image: "/assets/marine-logistics.jpg",
+      title: "Marine Logistics",
       description:
         "Comprehensive offshore support vessel services including supply, anchor handling, and platform support for the global energy industry.",
-      link: "#marine",
+      link: "/services#marine",
     },
     {
-      image: "/assets/bour-2.jpeg",
+      image: "/assets/passenger-mobility.jpg",
+      title: "Crew Transportation",
+      description:
+        "Safe and efficient crew transfer services connecting offshore installations with onshore facilities across the globe.",
+      link: "/services#crew",
+    },
+    {
+      image: "/assets/maritime-training.jpg",
+      title: "Internal Maritime Training",
+      description:
+        "STCW-aligned safety training, simulator-based instruction, and cadet-to-officer development pathways for our maritime workforce.",
+      link: "/services#training",
+    },
+    {
+      image: "/assets/subsea-operations.jpg",
       title: "Subsea Operations",
       description:
         "Advanced subsea construction, inspection, and maintenance services utilizing state-of-the-art ROVs and specialized equipment.",
-      link: "#subsea",
-    },
-    {
-      image: "/assets/bour-3.jpeg",
-      title: "Passenger Mobility",
-      description:
-        "Safe and efficient crew transfer services connecting offshore installations with onshore facilities across the globe.",
-      link: "#passenger",
+      link: "/services#subsea",
     },
   ];
 

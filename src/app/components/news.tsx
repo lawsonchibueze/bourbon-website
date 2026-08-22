@@ -44,9 +44,11 @@ const News = () => {
               Latest News
             </h2>
           </div>
-          <Button variant="link" className="hidden md:flex text-foreground">
-            View All News
-            <ArrowRight className="w-4 h-4" />
+          <Button variant="link" className="hidden md:flex text-foreground" asChild>
+            <a href="/news">
+              View All News
+              <ArrowRight className="w-4 h-4" />
+            </a>
           </Button>
         </div>
 
@@ -133,9 +135,11 @@ const News = () => {
 
         {/* Mobile View All Button */}
         <div className="mt-8 text-center md:hidden">
-          <Button variant="default" className="w-full">
-            View All News
-            <ArrowRight className="w-4 h-4" />
+          <Button variant="default" className="w-full" asChild>
+            <a href="/news">
+              View All News
+              <ArrowRight className="w-4 h-4" />
+            </a>
           </Button>
         </div>
       </div>

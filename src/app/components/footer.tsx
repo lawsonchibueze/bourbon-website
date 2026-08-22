@@ -13,22 +13,22 @@ import AlphaMark from "./alpha-mark";
 const Footer = () => {
   const footerLinks = {
     Services: [
-      { label: "Marine & Logistics", href: "/services#marine" },
+      { label: "Marine Logistics", href: "/services#marine" },
+      { label: "Crew Transportation", href: "/services#crew" },
+      { label: "Internal Maritime Training", href: "/services#training" },
       { label: "Subsea Operations", href: "/services#subsea" },
-      { label: "Passenger Mobility", href: "/services#passenger" },
-      { label: "Fleet Overview", href: "/#fleet" },
     ],
     Company: [
-      { label: "About Us", href: "/group#about" },
-      { label: "Leadership", href: "/group#leadership" },
-      { label: "Locations", href: "/group#locations" },
+      { label: "Company Profile", href: "/about#profile" },
+      { label: "Vision, Mission & Values", href: "/about#values" },
+      { label: "Leadership Team", href: "/about#leadership" },
       { label: "Careers", href: "/careers" },
     ],
     Resources: [
+      { label: "Fleet & Assets", href: "/fleet" },
+      { label: "HSE & Sustainability", href: "/hse" },
       { label: "News & Media", href: "/news" },
-      { label: "Sustainability", href: "/#excellence" },
-      { label: "Safety", href: "/#excellence" },
-      { label: "Innovation", href: "/#excellence" },
+      { label: "Photo Gallery", href: "/news#gallery" },
     ],
     Legal: [
       { label: "Privacy Policy", href: "#" },

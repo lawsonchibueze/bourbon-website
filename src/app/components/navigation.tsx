@@ -11,39 +11,59 @@ const Navigation = () => {
 
   const navItems = [
     {
-      label: "Services",
-      href: "/services",
+      label: "About",
+      href: "/about",
       items: [
-        { label: "Marine & Logistics", href: "/services#marine" },
-        { label: "Subsea Operations", href: "/services#subsea" },
-        { label: "Passenger Mobility", href: "/services#passenger" },
+        { label: "Company Profile", href: "/about#profile" },
+        { label: "History", href: "/about#history" },
+        { label: "Vision, Mission & Values", href: "/about#values" },
+        { label: "Leadership Team", href: "/about#leadership" },
       ],
     },
     {
-      label: "Group",
-      href: "/group",
+      label: "Services",
+      href: "/services",
       items: [
-        { label: "About Us", href: "/group#about" },
-        { label: "Leadership", href: "/group#leadership" },
-        { label: "Locations", href: "/group#locations" },
+        { label: "Marine Logistics", href: "/services#marine" },
+        { label: "Crew Transportation", href: "/services#crew" },
+        { label: "Internal Maritime Training", href: "/services#training" },
+        { label: "Subsea Operations", href: "/services#subsea" },
+      ],
+    },
+    {
+      label: "Fleet",
+      href: "/fleet",
+      items: [
+        { label: "Vessel Categories", href: "/fleet#categories" },
+        { label: "Fleet Capabilities", href: "/fleet#capabilities" },
+        { label: "Technical Specifications", href: "/fleet#specifications" },
+      ],
+    },
+    {
+      label: "HSE",
+      href: "/hse",
+      items: [
+        { label: "Health, Safety & Environment", href: "/hse#hse" },
+        { label: "Quality Management", href: "/hse#quality" },
+        { label: "Environmental Stewardship", href: "/hse#environment" },
       ],
     },
     {
       label: "Careers",
       href: "/careers",
       items: [
-        { label: "Job Opportunities", href: "/careers#jobs" },
-        { label: "Life at Sea", href: "/careers#life-at-sea" },
-        { label: "Training", href: "/careers#training" },
+        { label: "Working at Alpha", href: "/careers#life-at-sea" },
+        { label: "Training & Development", href: "/careers#training" },
+        { label: "Current Vacancies", href: "/careers#jobs" },
       ],
     },
     {
-      label: "News & Media",
+      label: "News",
       href: "/news",
       items: [
-        { label: "Latest News", href: "/news#latest" },
         { label: "Press Releases", href: "/news#press" },
-        { label: "Media Kit", href: "/news#media-kit" },
+        { label: "Events", href: "/news#events" },
+        { label: "Photo Gallery", href: "/news#gallery" },
       ],
     },
   ];
@@ -60,7 +80,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-10">
+          <div className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
                 <Link

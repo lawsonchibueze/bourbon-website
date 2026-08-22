@@ -1,8 +1,10 @@
 import CTABanner from "./components/ctaBanner";
+import CompanyOverview from "./components/companyOverview";
 import Excellence from "./components/excelence";
 import Fleet from "./components/fleet";
 import Footer from "./components/footer";
 import Hero from "./components/hero";
+import HseHighlights from "./components/hseHighlights";
 import Navigation from "./components/navigation";
 import News from "./components/news";
 import Services from "./components/services";
@@ -14,10 +16,12 @@ export default function Home() {
     <main className="min-h-screen">
       <Navigation />
       <Hero />
+      <CompanyOverview />
       <Services />
       <Stats />
       <Excellence />
       <Fleet />
+      <HseHighlights />
       <News />
       <Testimonials />
       {/* <CTABanner /> */}
