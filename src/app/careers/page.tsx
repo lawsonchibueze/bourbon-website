@@ -20,8 +20,8 @@ const openRoles = [
     type: "Full-time",
   },
   {
-    title: "ROV Pilot Technician",
-    department: "Subsea Operations",
+    title: "Maritime Training Instructor",
+    department: "Internal Maritime Training",
     location: "Aberdeen, UK",
     type: "Full-time",
   },

@@ -25,9 +25,9 @@ const News = () => {
       image: "/assets/bour-9.jpeg",
       category: "Innovation",
       date: "March 5, 2025",
-      title: "Pioneering Subsea Technology for Deeper Waters",
+      title: "Expanding Our Internal Maritime Training Academy",
       excerpt:
-        "Investment in next-generation ROV systems enables operations at unprecedented depths with enhanced safety.",
+        "New simulator-based training facility strengthens STCW-aligned instruction for crew and offshore personnel.",
     },
   ];
 

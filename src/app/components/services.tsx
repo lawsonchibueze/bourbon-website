@@ -23,13 +23,6 @@ const Services = () => {
         "STCW-aligned safety training, simulator-based instruction, and cadet-to-officer development pathways for our maritime workforce.",
       link: "/services#training",
     },
-    {
-      image: "/assets/subsea-operations.jpg",
-      title: "Subsea Operations",
-      description:
-        "Advanced subsea construction, inspection, and maintenance services utilizing state-of-the-art ROVs and specialized equipment.",
-      link: "/services#subsea",
-    },
   ];
 
   return (

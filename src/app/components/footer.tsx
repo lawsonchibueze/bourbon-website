@@ -16,7 +16,6 @@ const Footer = () => {
       { label: "Marine Logistics", href: "/services#marine" },
       { label: "Crew Transportation", href: "/services#crew" },
       { label: "Internal Maritime Training", href: "/services#training" },
-      { label: "Subsea Operations", href: "/services#subsea" },
     ],
     Company: [
       { label: "Company Profile", href: "/about#profile" },

@@ -23,7 +23,7 @@ const pressReleases = [
   },
   {
     date: "January 30, 2025",
-    title: "Alpha Appoints New VP of Subsea Operations",
+    title: "Alpha Appoints New VP of Crew Transportation",
   },
   {
     date: "December 12, 2024",
@@ -50,7 +50,7 @@ const events = [
   },
   {
     date: "January 20, 2027",
-    title: "Subsea Technology & Innovation Forum — Houston",
+    title: "Maritime Training & Safety Forum — Houston",
   },
 ];
 

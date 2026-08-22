@@ -9,7 +9,7 @@ import { Button } from "../components/ui/button";
 export const metadata: Metadata = {
   title: "Services | Alpha",
   description:
-    "Marine logistics, crew transportation, internal maritime training, and subsea operations services delivered across the global offshore energy industry.",
+    "Marine logistics, crew transportation, and internal maritime training services delivered across the global offshore energy industry.",
 };
 
 const services = [
@@ -62,23 +62,6 @@ const services = [
     stats: [
       { value: "40+", label: "Years of experience" },
       { value: "100%", label: "STCW-aligned crew" },
-    ],
-  },
-  {
-    id: "subsea",
-    title: "Subsea Operations",
-    image: "/assets/subsea-operations.jpg",
-    description:
-      "Advanced subsea construction, inspection, and maintenance services utilizing state-of-the-art ROVs and specialized equipment, supporting projects from shallow water to deepwater environments.",
-    capabilities: [
-      "ROV inspection, repair & intervention",
-      "Subsea construction & installation support",
-      "Pipeline & umbilical lay support",
-      "Survey, positioning & geodata services",
-    ],
-    stats: [
-      { value: "40+", label: "Years of experience" },
-      { value: "150+", label: "Subsea missions / yr" },
     ],
   },
 ];

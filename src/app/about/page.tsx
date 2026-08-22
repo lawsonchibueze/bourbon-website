@@ -44,9 +44,9 @@ const milestones = [
   },
   {
     year: "2019",
-    title: "Subsea Division Launched",
+    title: "Training Academy Established",
     description:
-      "A dedicated subsea construction and inspection division is established, broadening the group's technical capability.",
+      "Alpha's internal maritime training academy is established, formalising STCW-aligned instruction for crew and offshore personnel.",
   },
   {
     year: "2023",
@@ -95,7 +95,7 @@ const leadership = [
   { name: "Erik Lindqvist", role: "Chief Financial Officer" },
   { name: "Sofia Alvarenga", role: "Chief HSE Officer" },
   { name: "David Okoye", role: "VP, Fleet & Technical Operations" },
-  { name: "Mei Lin Tan", role: "VP, Subsea Operations" },
+  { name: "Mei Lin Tan", role: "VP, Crew Transportation" },
 ];
 
 export default function AboutPage() {
@@ -138,9 +138,9 @@ export default function AboutPage() {
                 </p>
                 <p>
                   Today, our vessels and crews operate across more than 37
-                  countries, supporting marine logistics, subsea construction,
-                  and crew transportation for the world&apos;s leading energy
-                  operators. We continue to invest in newer, cleaner tonnage
+                  countries, supporting marine logistics, crew transportation,
+                  and internal maritime training for the world&apos;s leading
+                  energy operators. We continue to invest in newer, cleaner tonnage
                   and in the people who keep it running.
                 </p>
               </div>

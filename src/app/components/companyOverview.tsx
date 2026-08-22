@@ -27,8 +27,8 @@ const CompanyOverview = () => {
               Alpha is a global marine services group supporting the offshore
               energy industry with a modern fleet, deep technical expertise,
               and an unwavering commitment to safety. From marine logistics to
-              subsea operations, our vessels and crews keep essential
-              offshore work moving around the clock.
+              crew transportation and training, our vessels and crews keep
+              essential offshore work moving around the clock.
             </p>
             <Button variant="link" className="px-0 text-foreground" asChild>
               <a href="/about">
