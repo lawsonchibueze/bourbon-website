@@ -1,25 +1,37 @@
-import { HeartPulse, Leaf, ShieldCheck, ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  HeartPulse,
+  Leaf,
+  ShieldCheck,
+} from "lucide-react";
 import { Button } from "./ui/button";
 
 const HseHighlights = () => {
   const highlights = [
     {
+      icon: CheckCircle2,
+      title: "Quality",
+      description:
+        "Reliable operations, consistent service, and lasting client confidence through disciplined processes and continuous improvement.",
+    },
+    {
       icon: HeartPulse,
       title: "Health",
       description:
-        "Comprehensive medical support and wellbeing programs for every crew member, on board and ashore.",
+        "Protecting the health and wellbeing of employees, offshore passengers, contractors, and everyone affected by our operations.",
     },
     {
       icon: ShieldCheck,
       title: "Safety",
       description:
-        "Zero-compromise safety standards, rigorous training, and a fleet-wide culture of incident prevention.",
+        "Preventing harm through effective operational controls, competent personnel, emergency preparedness, and safe behaviour.",
     },
     {
       icon: Leaf,
       title: "Environment",
       description:
-        "Investing in cleaner tonnage and responsible operations to reduce our impact on the marine environment.",
+        "Preventing pollution, managing environmental impacts responsibly, and continually improving the way we operate.",
     },
   ];
 
@@ -29,24 +41,35 @@ const HseHighlights = () => {
       className="py-24 bg-secondary/60 border-y border-border scroll-mt-20"
     >
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
-          <div className="grid md:grid-cols-12 gap-6 md:flex-1">
-            <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
-              HSE & Sustainability
-            </p>
-            <h2 className="md:col-span-7 font-serif text-4xl md:text-5xl text-foreground">
-              HSE Highlights
+        <div className="grid md:grid-cols-12 gap-6 mb-16">
+          <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
+            QHSE
+          </p>
+          <div className="md:col-span-7">
+            <h2 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.08]">
+              Protecting People. Preserving the Environment. Delivering Excellence.
             </h2>
+            <p className="mt-8 text-muted-foreground leading-relaxed max-w-2xl">
+              At Bourbon Interoil Nigeria Limited, Quality, Health, Safety and
+              Environment are fundamental to how we operate and deliver marine
+              logistics services. In an industry where the safe transportation
+              of personnel offshore is critical, we are committed to
+              preventing harm, protecting the environment, safeguarding our
+              assets, and delivering reliable services that meet our clients’
+              expectations.
+            </p>
           </div>
-          <Button variant="link" className="hidden md:flex text-foreground shrink-0" asChild>
-            <a href="/hse">
-              View Our HSE Standards
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </Button>
+          <div className="md:col-span-3 flex md:items-end md:justify-end">
+            <Button variant="link" className="hidden md:flex text-foreground shrink-0" asChild>
+              <a href="/hse">
+                View Our QHSE Standards
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </Button>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-3 border-t border-l border-border">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-border">
           {highlights.map((item, index) => (
             <div
               key={item.title}
@@ -69,7 +92,7 @@ const HseHighlights = () => {
         <div className="mt-8 text-center md:hidden">
           <Button variant="default" className="w-full" asChild>
             <a href="/hse">
-              View Our HSE Standards
+              View Our QHSE Standards
               <ArrowRight className="w-4 h-4" />
             </a>
           </Button>
