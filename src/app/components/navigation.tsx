@@ -39,7 +39,7 @@ const Navigation = () => {
       ],
     },
     {
-      label: "HSE",
+      label: "QHSE",
       href: "/hse",
       items: [
         { label: "Health, Safety & Environment", href: "/hse#hse" },
