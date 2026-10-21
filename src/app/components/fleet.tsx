@@ -31,6 +31,15 @@ const Fleet = () => {
       description:
         "Specialized vessels supporting the renewable energy sector with crew transfer and service operation capabilities for offshore wind farms.",
     },
+    {
+      image: "/assets/crew-boat-27.jpg",
+      icon: Ship,
+      type: "Crew Boats",
+      name: "Crew Boat Series",
+      specs: "50–70 Passengers | Up to 28 Knots",
+      description:
+        "Modern crew boats designed around passenger comfort, safety, technical reliability, and efficient offshore personnel transfers across a range of operating environments.",
+    },
   ];
 
   return (
