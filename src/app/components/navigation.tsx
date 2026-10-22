@@ -44,7 +44,7 @@ const Navigation = () => {
       items: [
         { label: "Health, Safety & Environment", href: "/hse#hse" },
         { label: "Quality Management", href: "/hse#quality" },
-        { label: "Environmental Stewardship", href: "/hse#environment" },
+        { label: "Environment Management", href: "/hse#environment" },
       ],
     },
     {

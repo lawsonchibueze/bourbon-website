@@ -1,4 +1,3 @@
-import { CheckCircle2, HeartPulse, Leaf, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import type { Metadata } from "next";
 import Footer from "../components/footer";
@@ -10,33 +9,6 @@ export const metadata: Metadata = {
     "Quality, health, safety, and environmental responsibility across Alpha's marine logistics operations.",
 };
 
-const qhseAreas = [
-  {
-    icon: CheckCircle2,
-    title: "Quality",
-    description:
-      "Reliable operations and consistent marine logistics services delivered through effective processes, assurance, and continuous improvement.",
-  },
-  {
-    icon: HeartPulse,
-    title: "Health",
-    description:
-      "Protecting the health and wellbeing of employees, offshore passengers, contractors, and other people affected by our operations.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Safety",
-    description:
-      "Preventing harm through effective operational controls, competent personnel, emergency preparedness, and a shared commitment to safe behaviour.",
-  },
-  {
-    icon: Leaf,
-    title: "Environment",
-    description:
-      "Preventing pollution, managing environmental impacts responsibly, and continually improving the way we use fuel, energy, and other resources.",
-  },
-];
-
 const safetyPractices = [
   ["Safe Offshore Personnel Transfers", "Risk assessment, appropriate procedures, personnel readiness, suitable protective equipment, and consideration of prevailing environmental conditions."],
   ["Hazard Identification and Stop Work Authority", "Reporting unsafe conditions, unsafe behaviours, and near misses, with the authority to intervene when work cannot be performed safely."],
@@ -47,12 +19,13 @@ const safetyPractices = [
 ];
 
 const qualityPractices = [
-  ["Reliable Service Delivery", "Services are planned and delivered in accordance with agreed requirements, operational procedures, and applicable standards."],
-  ["Compliance and Assurance", "Audits, inspections, and performance reviews help assess compliance and maintain management-system effectiveness."],
-  ["Corrective Action and Continuous Improvement", "Identified gaps are investigated, addressed, and monitored through closure."],
-  ["Document Control and Operational Discipline", "Accurate records and controlled documentation support decision-making and traceability."],
-  ["Client Satisfaction", "Client feedback and engagement inform service improvements and long-term relationships."],
-  ["Integrated Management Systems", "Quality, health, safety, and environmental performance are managed as interconnected responsibilities."],
+  ["Reliable Service Delivery", "We work to ensure that our marine logistics services are planned and delivered in accordance with agreed requirements, operational procedures, and applicable standards."],
+  ["Compliance and Assurance", "We use audits, inspections, and performance reviews to assess compliance, identify improvement opportunities, and maintain the effectiveness of our management systems."],
+  ["Corrective Action and Continuous Improvement", "We investigate identified gaps, implement corrective actions, and monitor their closure to prevent recurrence and improve performance."],
+  ["Document Control and Operational Discipline", "We promote accurate records, controlled documentation, and consistent application of approved procedures to support effective decision-making and traceability."],
+  ["Client Satisfaction", "We value client feedback and engagement as essential inputs for improving service delivery, addressing concerns, and strengthening long-term business relationships."],
+  ["Integrated Management Systems", "We recognise that quality, health, safety, and environmental performance are interconnected. Our integrated approach supports reliable operations while protecting people, the environment, and company assets."],
+  ["Our Commitment", "We are committed to delivering dependable, compliant, and high-quality marine logistics services through accountability, disciplined execution, and continuous improvement."],
 ];
 
 const environmentalPriorities = [
@@ -88,21 +61,27 @@ export default function HsePage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-border">
-            {qhseAreas.map((area, index) => (
-              <div key={area.title} className="group p-8 border-r border-b border-border animate-fade-in">
-                <span className="font-serif text-lg text-brand">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <area.icon className="w-6 h-6 text-brand mt-4 mb-4" />
-                <h3 className="text-lg font-medium text-foreground mb-2">
-                  {area.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {area.description}
-                </p>
-              </div>
-            ))}
+          <div className="max-w-4xl space-y-8">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground">
+              Protecting People. Preserving the Environment. Delivering Excellence.
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              At Bourbon Interoil Nigeria Limited, Quality, Health, Safety and
+              Environment are fundamental to how we operate and deliver marine
+              logistics services. In an industry where the safe transportation
+              of personnel offshore is critical, we are committed to preventing
+              harm, protecting the environment, safeguarding our assets, and
+              delivering reliable services that meet our clients&apos; expectations.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Through visible safety leadership, proactive risk management,
+              environmental responsibility, and continuous improvement, we
+              strive to ensure that every journey, every task, and every service
+              is performed safely and responsibly.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Our ambition is clear: <strong className="text-foreground">Zero Injuries and Sustained Client Satisfaction.</strong>
+            </p>
           </div>
         </div>
       </section>
@@ -143,19 +122,19 @@ export default function HsePage() {
               <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Quality Management</p>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground">Reliable Operations. Consistent Service. Lasting Client Confidence.</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Quality means delivering marine logistics services that
-                consistently meet client requirements, applicable regulations,
-                and established operational standards. Reliable service
+                At Bourbon Interoil Nigeria Limited, quality means delivering
+                marine logistics services that consistently meet client
+                requirements, applicable regulations, and established
+                operational standards. We recognise that reliable service
                 delivery depends on competent personnel, well-maintained
                 assets, effective processes, accurate documentation, and a
-                commitment to learning and improvement.
+                commitment to learning and improvement. Our Quality Management
+                approach promotes consistency across our vessels and shore
+                bases, helping us identify gaps, address non-conformities, and
+                strengthen the reliability of our services.
               </p>
+              <h3 className="text-lg font-medium text-foreground">How We Deliver Quality</h3>
               <PracticeList practices={qualityPractices} />
-              <p className="text-muted-foreground leading-relaxed">
-                We are committed to delivering dependable, compliant, and
-                high-quality marine logistics services through accountability,
-                disciplined execution, and continuous improvement.
-              </p>
             </div>
             <div className="relative overflow-hidden h-[420px] order-1 lg:order-2">
               <Image width={1920} height={1280} src="/assets/qhse-quality.jpg" alt="Marine worker carrying out an operational inspection" className="w-full h-full object-cover" />
@@ -171,7 +150,7 @@ export default function HsePage() {
               <Image width={1824} height={1366} src="/assets/qhse-environment.jpg" alt="Vessel operating responsibly in the marine environment" className="w-full h-full object-cover" />
             </div>
             <div className="space-y-6">
-              <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Environmental Stewardship</p>
+              <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Environment Management</p>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground">Protecting the Marine Environment, One Operation at a Time</h2>
               <p className="text-muted-foreground leading-relaxed">
                 The marine environment is central to our business. We recognise
@@ -185,12 +164,19 @@ export default function HsePage() {
                 responsibly, and improving the efficiency with which we use
                 fuel, energy, and other resources.
               </p>
+              <p className="text-muted-foreground leading-relaxed">
+                We believe environmental protection is a shared responsibility.
+                Through operational discipline, personnel awareness, appropriate
+                equipment, and continuous improvement, we work to minimise the
+                environmental footprint of our activities.
+              </p>
               <PracticeList practices={environmentalPriorities} />
+              <h3 className="text-lg font-medium text-foreground">Our Commitment</h3>
               <p className="text-muted-foreground leading-relaxed">
                 We are committed to preventing pollution, complying with
-                applicable environmental requirements, and continually
-                improving our environmental performance to support responsible
-                marine operations.
+                applicable environmental requirements, and continually improving
+                our environmental performance to support responsible marine
+                operations.
               </p>
             </div>
           </div>

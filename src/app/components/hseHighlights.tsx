@@ -1,40 +1,7 @@
-import {
-  ArrowRight,
-  CheckCircle2,
-  HeartPulse,
-  Leaf,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 
 const HseHighlights = () => {
-  const highlights = [
-    {
-      icon: CheckCircle2,
-      title: "Quality",
-      description:
-        "Reliable operations, consistent service, and lasting client confidence through disciplined processes and continuous improvement.",
-    },
-    {
-      icon: HeartPulse,
-      title: "Health",
-      description:
-        "Protecting the health and wellbeing of employees, offshore passengers, contractors, and everyone affected by our operations.",
-    },
-    {
-      icon: ShieldCheck,
-      title: "Safety",
-      description:
-        "Preventing harm through effective operational controls, competent personnel, emergency preparedness, and safe behaviour.",
-    },
-    {
-      icon: Leaf,
-      title: "Environment",
-      description:
-        "Preventing pollution, managing environmental impacts responsibly, and continually improving the way we operate.",
-    },
-  ];
-
   return (
     <section
       id="hse-highlights"
@@ -67,26 +34,6 @@ const HseHighlights = () => {
               </a>
             </Button>
           </div>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-border">
-          {highlights.map((item, index) => (
-            <div
-              key={item.title}
-              className="p-8 border-r border-b border-border bg-background"
-            >
-              <span className="font-serif text-lg text-brand">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <item.icon className="w-6 h-6 text-brand mt-4 mb-4" />
-              <h3 className="text-lg font-medium text-foreground mb-2">
-                {item.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-          ))}
         </div>
 
         <div className="mt-8 text-center md:hidden">

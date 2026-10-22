@@ -50,16 +50,19 @@ const services = [
   {
     id: "training",
     title: "Internal Maritime Training",
-    image: "/assets/marine-training-simulator.png",
+    image: "/assets/maritime-training.jpg",
     description:
-      "Bourbon Training Center develops competent, safety-conscious, and performance-driven marine professionals through practical deck and classroom training, simulator-based exercises, equipment familiarisation, and competency assessments.",
+      "Alpha's internal training academy prepares crew and offshore personnel to the highest standards of safety and technical competence. From STCW-aligned certification to simulator-based technical instruction, we build the skills our fleet runs on and offer that same rigor to clients building out their own offshore workforce.",
     capabilities: [
-      "Type C IMO Bridge Simulator Training",
-      "Furuno FMD-3200 ECDIS Type-Specific Training",
-      "Garmin Navigation Equipment Training",
-      "GPS Training",
+      "STCW-aligned safety & survival training",
+      "Simulator-based technical & DP training",
+      "Cadet-to-officer development pathways",
+      "Ongoing certification & recertification programs",
     ],
-    stats: [],
+    stats: [
+      { value: "40+", label: "Years of experience" },
+      { value: "100%", label: "STCW-aligned crew" },
+    ],
   },
 ];
 
@@ -152,81 +155,6 @@ export default function ServicesPage() {
           </div>
         </section>
       ))}
-
-      <section id="training-center" className="py-24 scroll-mt-20 bg-secondary/60 border-y border-border">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-12 gap-6 mb-16">
-            <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
-              Bourbon Training Center
-            </p>
-            <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
-              Building Competence, Enhancing Safety, and Driving Operational Excellence
-            </h2>
-            <p className="md:col-span-4 text-muted-foreground leading-relaxed">
-              At Bourbon Interoil Nigeria Limited (BINL), marine training is
-              designed to strengthen crew competence, operational reliability,
-              and a culture of continuous learning.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-            <div className="space-y-6 text-muted-foreground leading-relaxed">
-              <p>
-                Through a combination of practical deck and classroom
-                training, simulator-based exercises, equipment familiarisation,
-                and competency assessments, we equip our crew and personnel
-                with the knowledge, technical skills, and confidence required
-                to perform their duties safely and effectively in challenging
-                offshore environments.
-              </p>
-              <div>
-                <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-4">
-                  Our Approach
-                </p>
-                <p>
-                  Effective marine training goes beyond theoretical knowledge.
-                  Our approach combines structured instruction with practical
-                  exercises, scenario-based learning, equipment familiarisation,
-                  and competency evaluation. Training outcomes are reviewed to
-                  identify areas for improvement and ensure that learning
-                  translates into safer and more reliable onboard performance.
-                </p>
-              </div>
-            </div>
-            <div className="space-y-6 text-muted-foreground leading-relaxed">
-              <div>
-                <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-4">
-                  Operational Alignment
-                </p>
-                <p>
-                  By aligning training activities with operational requirements,
-                  applicable maritime standards, client expectations, and
-                  industry best practices, BINL continues to strengthen the
-                  competence of its marine workforce and support dependable
-                  offshore marine services.
-                </p>
-              </div>
-              <div>
-                <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-4">
-                  Our Commitment
-                </p>
-                <p>
-                  At BINL, competence is a cornerstone of safe operations. We
-                  remain committed to investing in our people, improving
-                  technical capabilities, and promoting professional excellence
-                  to ensure that our personnel are prepared to meet operational
-                  challenges while protecting lives, assets, and the marine
-                  environment.
-                </p>
-              </div>
-              <p className="font-serif text-xl text-foreground">
-                Bourbon Interoil Nigeria Limited &mdash; Developing Competence.
-                Promoting Safety. Delivering Operational Excellence.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </main>
