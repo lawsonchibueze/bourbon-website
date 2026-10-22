@@ -3,7 +3,6 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import Footer from "../components/footer";
 import Navigation from "../components/navigation";
-import PageHeader from "../components/page-header";
 
 export const metadata: Metadata = {
   title: "HSE & Sustainability | Alpha",
@@ -80,35 +79,12 @@ export default function HsePage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <PageHeader
-        eyebrow="QHSE"
-        title="Quality, Health, Safety & Environment"
-        description="Protecting people, preserving the environment, and delivering reliable marine logistics services through continuous improvement."
-      />
 
       <section id="hse" className="py-24 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-12 gap-6 mb-16">
             <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
               Our Standards
-            </p>
-            <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
-              Quality, Health, Safety &amp; Environment
-            </h2>
-            <p className="md:col-span-4 text-muted-foreground leading-relaxed">
-              At Bourbon Interoil Nigeria Limited, Quality, Health, Safety and
-              Environment are fundamental to how we operate and deliver marine
-              logistics services. In an industry where the safe transportation
-              of personnel offshore is critical, we are committed to
-              preventing harm, protecting the environment, safeguarding our
-              assets, and delivering reliable services that meet our clients’
-              expectations.
-              <br />
-              <br />
-              Quality, health, safety, and environmental performance are
-              interconnected. Together, they guide how we protect people,
-              safeguard assets, preserve the marine environment, and meet our
-              clients&apos; expectations.
             </p>
           </div>
 

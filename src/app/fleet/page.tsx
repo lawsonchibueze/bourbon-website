@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import { Fragment } from "react";
 import Footer from "../components/footer";
 import Navigation from "../components/navigation";
-import PageHeader from "../components/page-header";
 import { Button } from "../components/ui/button";
 
 export const metadata: Metadata = {
@@ -173,11 +172,6 @@ export default function FleetPage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <PageHeader
-        eyebrow="Fleet & Assets"
-        title="Our Fleet & Assets"
-        description="A diverse fleet of modern vessels equipped to handle any offshore challenge with reliability and precision."
-      />
 
       {/* Vessel Categories & Fleet Capabilities */}
       <section id="categories" className="py-24 scroll-mt-20">
@@ -185,14 +179,6 @@ export default function FleetPage() {
           <div className="grid md:grid-cols-12 gap-6 mb-16">
             <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
               Vessel Categories
-            </p>
-            <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
-              Built for Every Offshore Mission
-            </h2>
-            <p className="md:col-span-4 text-muted-foreground leading-relaxed">
-              Three specialized vessel classes, each engineered around a
-              distinct mission profile and outfitted with the capabilities
-              our clients depend on offshore.
             </p>
           </div>
 
@@ -283,7 +269,7 @@ export default function FleetPage() {
             <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
               Crew Boats
             </p>
-            <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
+            <h2 className="md:col-span-10 font-serif text-4xl md:text-5xl text-foreground">
               Crew Boat Series
             </h2>
             <p className="md:col-span-4 text-muted-foreground leading-relaxed">
@@ -367,11 +353,6 @@ export default function FleetPage() {
             <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
               Technical Specifications
             </h2>
-            <p className="md:col-span-4 text-muted-foreground leading-relaxed">
-              Illustrative fleet-wide figures shown for site design purposes
-              &mdash; exact specifications vary by vessel and are confirmed
-              at charter.
-            </p>
           </div>
 
           <div className="overflow-x-auto">
