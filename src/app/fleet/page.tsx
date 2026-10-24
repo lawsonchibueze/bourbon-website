@@ -1,7 +1,6 @@
 import { Anchor, CheckCircle2, Ship, Wind } from "lucide-react";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { Fragment } from "react";
 import Footer from "../components/footer";
 import Navigation from "../components/navigation";
 import { Button } from "../components/ui/button";
@@ -9,7 +8,7 @@ import { Button } from "../components/ui/button";
 export const metadata: Metadata = {
   title: "Fleet & Assets | Alpha",
   description:
-    "Vessel categories, fleet capabilities, and technical specifications across Alpha's global offshore support fleet.",
+    "Vessel categories and fleet capabilities across Alpha's global offshore support fleet.",
 };
 
 const vesselCategories = [
@@ -69,39 +68,6 @@ const vesselCategories = [
       { value: "60+", label: "Offshore beds (SOV)" },
       { value: "40+", label: "Vessels in class" },
     ],
-  },
-];
-
-const specifications = [
-  {
-    metric: "Deck Space",
-    ahts: "750 m²",
-    psv: "900 m²",
-    wind: "600 m²",
-  },
-  {
-    metric: "Deadweight (DWT)",
-    ahts: "3,200 t",
-    psv: "4,500 t",
-    wind: "2,800 t",
-  },
-  {
-    metric: "Bollard Pull / BHP",
-    ahts: "18,000 BHP",
-    psv: "9,000 BHP",
-    wind: "6,500 BHP",
-  },
-  {
-    metric: "Crew Capacity",
-    ahts: "24",
-    psv: "20",
-    wind: "60 (SOV) / 24 (CTV)",
-  },
-  {
-    metric: "Max Speed",
-    ahts: "16 knots",
-    psv: "15 knots",
-    wind: "26 knots (CTV)",
   },
 ];
 
@@ -336,73 +302,6 @@ export default function FleetPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Specifications */}
-      <section
-        id="specifications"
-        className="py-24 scroll-mt-20 bg-secondary/60 border-y border-border"
-      >
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-12 gap-6 mb-16">
-            <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
-              By the Numbers
-            </p>
-            <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
-              Technical Specifications
-            </h2>
-          </div>
-
-          <div className="overflow-x-auto">
-            <div className="grid grid-cols-4 border-t border-l border-border min-w-[640px]">
-              <div className="border-r border-b border-border p-6 bg-surface-strong">
-                <span className="text-xs tracking-[0.15em] uppercase font-medium text-surface-strong-foreground">
-                  Metric
-                </span>
-              </div>
-              <div className="border-r border-b border-border p-6 bg-surface-strong">
-                <span className="text-xs tracking-[0.15em] uppercase font-medium text-surface-strong-foreground">
-                  AHTS
-                </span>
-              </div>
-              <div className="border-r border-b border-border p-6 bg-surface-strong">
-                <span className="text-xs tracking-[0.15em] uppercase font-medium text-surface-strong-foreground">
-                  PSV
-                </span>
-              </div>
-              <div className="border-r border-b border-border p-6 bg-surface-strong">
-                <span className="text-xs tracking-[0.15em] uppercase font-medium text-surface-strong-foreground">
-                  Wind Farm (SOV/CTV)
-                </span>
-              </div>
-
-              {specifications.map((row) => (
-                <Fragment key={row.metric}>
-                  <div className="border-r border-b border-border p-6">
-                    <span className="text-sm font-medium text-foreground">
-                      {row.metric}
-                    </span>
-                  </div>
-                  <div className="border-r border-b border-border p-6">
-                    <span className="text-sm text-muted-foreground">
-                      {row.ahts}
-                    </span>
-                  </div>
-                  <div className="border-r border-b border-border p-6">
-                    <span className="text-sm text-muted-foreground">
-                      {row.psv}
-                    </span>
-                  </div>
-                  <div className="border-r border-b border-border p-6">
-                    <span className="text-sm text-muted-foreground">
-                      {row.wind}
-                    </span>
-                  </div>
-                </Fragment>
-              ))}
-            </div>
           </div>
         </div>
       </section>

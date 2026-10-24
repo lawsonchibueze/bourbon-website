@@ -4,12 +4,13 @@ import type { Metadata } from "next";
 import Footer from "../components/footer";
 import Navigation from "../components/navigation";
 import PageHeader from "../components/page-header";
+import TrainingDetails from "../components/training-details";
 import { Button } from "../components/ui/button";
 
 export const metadata: Metadata = {
   title: "Services | Alpha",
   description:
-    "Marine logistics, crew transportation, and internal maritime training services delivered across the global offshore energy industry.",
+    "Marine logistics, crew transportation, and training and development services delivered across the global offshore energy industry.",
 };
 
 const services = [
@@ -26,8 +27,7 @@ const services = [
       "24/7 emergency response readiness",
     ],
     stats: [
-      { value: "223", label: "Vessels in service" },
-      { value: "37", label: "Countries served" },
+      { value: "34", label: "Vessels in service" },
     ],
   },
   {
@@ -49,7 +49,7 @@ const services = [
   },
   {
     id: "training",
-    title: "Internal Maritime Training",
+    title: "Training & Development",
     image: "/assets/maritime-training.jpg",
     description:
       "Alpha's internal training academy prepares crew and offshore personnel to the highest standards of safety and technical competence. From STCW-aligned certification to simulator-based technical instruction, we build the skills our fleet runs on and offer that same rigor to clients building out their own offshore workforce.",
@@ -85,6 +85,14 @@ export default function ServicesPage() {
           }`}
         >
           <div className="container mx-auto px-4">
+            {service.id === "training" ? (
+              <div className="space-y-10">
+                <h2 className="font-serif text-3xl md:text-4xl text-foreground">
+                  {service.title}
+                </h2>
+                <TrainingDetails />
+              </div>
+            ) : (
             <div
               className={`flex flex-col ${
                 index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"
@@ -152,6 +160,7 @@ export default function ServicesPage() {
                 </Button>
               </div>
             </div>
+            )}
           </div>
         </section>
       ))}

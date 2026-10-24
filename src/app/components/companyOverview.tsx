@@ -24,11 +24,11 @@ const CompanyOverview = () => {
               Four decades of offshore expertise
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Alpha is a global marine services group supporting the offshore
-              energy industry with a modern fleet, deep technical expertise,
-              and an unwavering commitment to safety. From marine logistics to
-              crew transportation and training, our vessels and crews keep
-              essential offshore work moving around the clock.
+              Bourbon Interoil Nigeria Limited (BINL) is a leading marine
+              services and logistics provider incorporated in Nigeria in 2004.
+              We support the oil and gas industry with safe, reliable, and
+              efficient offshore solutions while maintaining world-class
+              operational standards.
             </p>
             <Button variant="link" className="px-0 text-foreground" asChild>
               <a href="/about">

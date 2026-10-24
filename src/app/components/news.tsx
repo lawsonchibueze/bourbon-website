@@ -1,33 +1,25 @@
-import { Calendar, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 
 const News = () => {
   const articles = [
     {
-      image: "/assets/news-image.png",
-      category: "People & Culture",
-      date: "March 15, 2025",
-      title: "Celebrating Excellence: Our Crew Members' Stories",
+      image: "/assets/events/crew-seminar-11.jpg",
+      category: "Crew Seminar",
+      date: "Amadi Base, NLNG Road, Port Harcourt",
+      title: "Crew Seminar",
       excerpt:
-        "Meet the dedicated professionals behind our success as we highlight their achievements and commitment to maritime excellence.",
+        "A gathering focused on our crew, operational excellence, and the people who keep our marine services moving.",
       featured: true,
     },
     {
-      image: "/assets/bour-6.jpeg",
-      category: "Operations",
-      date: "March 10, 2025",
-      title: "Expanding Our Presence in the Gulf of Mexico",
+      image: "/assets/events/crew-seminar-02.jpg",
+      category: "People & Culture",
+      date: "Crew Seminar",
+      title: "Building Capability Together",
       excerpt:
-        "New contract wins strengthen our position as the leading offshore service provider in key energy markets.",
-    },
-    {
-      image: "/assets/bour-9.jpeg",
-      category: "Innovation",
-      date: "March 5, 2025",
-      title: "Expanding Our Internal Maritime Training Academy",
-      excerpt:
-        "New simulator-based training facility strengthens STCW-aligned instruction for crew and offshore personnel.",
+        "Highlights from the Crew Seminar and the continuing development of our Nigerian maritime workforce.",
     },
   ];
 
@@ -41,12 +33,12 @@ const News = () => {
               Newsroom
             </p>
             <h2 className="font-serif text-4xl md:text-5xl text-foreground">
-              Latest News
+              Latest Event
             </h2>
           </div>
           <Button variant="link" className="hidden md:flex text-foreground" asChild>
-            <a href="/news">
-              View All News
+            <a href="/news#events">
+              View Event Details
               <ArrowRight className="w-4 h-4" />
             </a>
           </Button>
@@ -72,7 +64,6 @@ const News = () => {
                   <div className="flex items-center gap-4 mb-4 text-xs tracking-[0.15em] uppercase">
                     <span>{articles[0].category}</span>
                     <span className="flex items-center text-surface-strong-foreground/80">
-                      <Calendar className="w-3.5 h-3.5 mr-2" />
                       {articles[0].date}
                     </span>
                   </div>
@@ -85,9 +76,12 @@ const News = () => {
                   <Button
                     size="sm"
                     className="bg-surface-strong-foreground text-surface-strong hover:bg-surface-strong-foreground/90 cursor-pointer"
+                    asChild
                   >
-                    Read More
-                    <ArrowRight className="w-4 h-4" />
+                    <a href="/news#events">
+                      Learn More
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -116,7 +110,6 @@ const News = () => {
                     {article.category}
                   </span>
                   <span className="flex items-center">
-                    <Calendar className="w-3.5 h-3.5 mr-2" />
                     {article.date}
                   </span>
                 </div>
@@ -124,9 +117,11 @@ const News = () => {
                   {article.title}
                 </h3>
                 <p className="text-muted-foreground text-sm">{article.excerpt}</p>
-                <Button size="sm" className="cursor-pointer">
-                  Read More
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <Button size="sm" className="cursor-pointer" asChild>
+                  <a href="/news#events">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </Button>
               </div>
             </div>
@@ -137,7 +132,7 @@ const News = () => {
         <div className="mt-8 text-center md:hidden">
           <Button variant="default" className="w-full" asChild>
             <a href="/news">
-              View All News
+              View Event Details
               <ArrowRight className="w-4 h-4" />
             </a>
           </Button>

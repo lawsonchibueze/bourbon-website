@@ -15,12 +15,11 @@ const Footer = () => {
     Services: [
       { label: "Marine Logistics", href: "/services#marine" },
       { label: "Crew Transportation", href: "/services#crew" },
-      { label: "Internal Maritime Training", href: "/services#training" },
+      { label: "Training & Development", href: "/services#training" },
     ],
     Company: [
       { label: "Company Profile", href: "/about#profile" },
       { label: "Vision, Mission & Values", href: "/about#values" },
-      { label: "Leadership Team", href: "/about#leadership" },
       { label: "Careers", href: "/careers" },
     ],
     Resources: [
@@ -116,9 +115,12 @@ const Footer = () => {
                   Head Office
                 </h4>
                 <p className="text-surface-strong-foreground/85 text-sm">
-                  50, Rue de Forbin - CS 60703 -13235
+                  16C Lugard Avenue, Ikoyi, Lagos
                   <br />
-                  Marseille Cedex 02 - France
+                  <span className="text-surface-strong-foreground/60">
+                    Operations Office:
+                  </span>{" "}
+                  Amadi Base, NLNG Road, Port Harcourt
                 </p>
               </div>
             </div>
@@ -126,10 +128,16 @@ const Footer = () => {
               <Phone className="w-4 h-4 text-surface-strong-foreground/60 mt-1" />
               <div>
                 <h4 className="text-xs tracking-[0.15em] uppercase font-medium mb-1 text-surface-strong-foreground/60">
-                  Phone
+                  Contact
                 </h4>
                 <p className="text-surface-strong-foreground/85 text-sm">
-                  +33 (0)4 91 13 08 00
+                  Mobile: +234 8150893453
+                  <br />
+                  +234 9169827730
+                  <br />
+                  IP Phone (DID): 02013301335
+                  <br />
+                  Ext: 23493
                 </p>
               </div>
             </div>
@@ -140,7 +148,7 @@ const Footer = () => {
                   Email
                 </h4>
                 <p className="text-surface-strong-foreground/85 text-sm">
-                  contact@alpha-offshore.com
+                  Unyimeabasi.nelsonjames@bourbon-interoil.com
                 </p>
               </div>
             </div>

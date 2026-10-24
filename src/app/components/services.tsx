@@ -6,21 +6,21 @@ const Services = () => {
       image: "/assets/marine-logistics.jpg",
       title: "Marine Logistics",
       description:
-        "Comprehensive offshore support vessel services including supply, anchor handling, and platform support for the global energy industry.",
+        "Reliable personnel transportation between shore bases, offshore locations, platforms, barges, and vessels.",
       link: "/services#marine",
     },
     {
       image: "/assets/passenger-mobility.jpg",
-      title: "Crew Transportation",
+      title: "Passenger Transportation",
       description:
-        "Safe and efficient crew transfer services connecting offshore installations with onshore facilities across the globe.",
+        "Safe and efficient transport of personnel for daily offshore tasks through regular schedules and pre-defined routes.",
       link: "/services#crew",
     },
     {
-      image: "/assets/maritime-training.jpg",
-      title: "Internal Maritime Training",
+      image: "/assets/marine-training-simulator.png",
+      title: "Training & Development",
       description:
-        "STCW-aligned safety training, simulator-based instruction, and cadet-to-officer development pathways for our maritime workforce.",
+        "Training and competence development that builds a skilled Nigerian maritime workforce and supports safe, reliable operations.",
       link: "/services#training",
     },
   ];

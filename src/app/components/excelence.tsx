@@ -1,30 +1,30 @@
-import { Shield, Anchor, Lightbulb, Award } from "lucide-react";
+import { Shield, Scale, Leaf, Users } from "lucide-react";
 
 const Excellence = () => {
   const features = [
     {
       icon: Shield,
-      title: "Safety First",
+      title: "Ensure Safety for All",
       description:
-        "Zero compromise on safety standards with comprehensive training programs and cutting-edge safety protocols for all operations.",
+        "We put the safety of our people, clients, and operations at the centre of everything we do.",
     },
     {
-      icon: Anchor,
-      title: "Proven Expertise",
+      icon: Scale,
+      title: "Act with Ethics",
       description:
-        "Over 40 years of maritime excellence delivering reliable offshore support services across the world's most challenging environments.",
+        "We act with integrity and remain compliant with our code of conduct and applicable laws and regulations.",
     },
     {
-      icon: Lightbulb,
-      title: "Innovation Driven",
+      icon: Leaf,
+      title: "Reduce Our Environmental Impact",
       description:
-        "Investing in the latest technology and sustainable solutions to lead the industry into a cleaner, more efficient future.",
+        "We work responsibly to reduce the environmental impact of our marine operations.",
     },
     {
-      icon: Award,
-      title: "Quality Assurance",
+      icon: Users,
+      title: "Trust in People and Develop Talents",
       description:
-        "ISO certified operations with rigorous quality control ensuring exceptional service delivery on every project.",
+        "We invest in people and develop the talent needed to build a strong Nigerian maritime workforce.",
     },
   ];
 

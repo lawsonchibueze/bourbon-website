@@ -17,7 +17,6 @@ const Navigation = () => {
         { label: "Company Profile", href: "/about#profile" },
         { label: "History", href: "/about#history" },
         { label: "Vision, Mission & Values", href: "/about#values" },
-        { label: "Leadership Team", href: "/about#leadership" },
       ],
     },
     {
@@ -26,7 +25,7 @@ const Navigation = () => {
       items: [
         { label: "Marine Logistics", href: "/services#marine" },
         { label: "Crew Transportation", href: "/services#crew" },
-        { label: "Internal Maritime Training", href: "/services#training" },
+        { label: "Training & Development", href: "/services#training" },
       ],
     },
     {
@@ -35,7 +34,6 @@ const Navigation = () => {
       items: [
         { label: "Vessel Categories", href: "/fleet#categories" },
         { label: "Fleet Capabilities", href: "/fleet#capabilities" },
-        { label: "Technical Specifications", href: "/fleet#specifications" },
       ],
     },
     {
@@ -50,17 +48,12 @@ const Navigation = () => {
     {
       label: "Careers",
       href: "/careers",
-      items: [
-        { label: "Working at Alpha", href: "/careers#life-at-sea" },
-        { label: "Training & Development", href: "/careers#training" },
-        { label: "Current Vacancies", href: "/careers#jobs" },
-      ],
+      items: [],
     },
     {
       label: "News",
       href: "/news",
       items: [
-        { label: "Press Releases", href: "/news#press" },
         { label: "Events", href: "/news#events" },
         { label: "Photo Gallery", href: "/news#gallery" },
       ],

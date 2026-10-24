@@ -1,4 +1,4 @@
-import { Compass, ShieldCheck, Target, Users, User } from "lucide-react";
+import { Compass, ShieldCheck, Target, Users } from "lucide-react";
 import Image from "next/image";
 import type { Metadata } from "next";
 import Footer from "../components/footer";
@@ -8,94 +8,44 @@ import PageHeader from "../components/page-header";
 export const metadata: Metadata = {
   title: "About Us | Alpha",
   description:
-    "The Alpha story, company history, vision & values, and leadership team behind four decades of offshore marine expertise.",
+    "The Bourbon Interoil Nigeria Limited story, history, vision, mission, values, and commitments in Nigeria's offshore marine sector.",
 };
 
-const milestones = [
-  {
-    year: "1986",
-    title: "Company Founded",
-    description:
-      "Alpha begins operations as a single regional operator supporting offshore energy activity along the Mediterranean coast.",
-  },
-  {
-    year: "1994",
-    title: "First Fleet Expansion",
-    description:
-      "Acquisition of additional offshore support vessels marks the beginning of a modern, multi-vessel fleet.",
-  },
-  {
-    year: "2001",
-    title: "North Sea Entry",
-    description:
-      "Alpha establishes a regional base in Aberdeen, extending operations into the North Sea's demanding offshore environment.",
-  },
-  {
-    year: "2008",
-    title: "ISO Certification",
-    description:
-      "Achieves ISO 9001 and ISO 14001 certification, formalising the group's commitment to quality and environmental management.",
-  },
-  {
-    year: "2013",
-    title: "Asia-Pacific Expansion",
-    description:
-      "Opening of the Singapore office brings Alpha's marine services to the Asia-Pacific offshore market.",
-  },
-  {
-    year: "2019",
-    title: "Training Academy Established",
-    description:
-      "Alpha's internal maritime training academy is established, formalising STCW-aligned instruction for crew and offshore personnel.",
-  },
-  {
-    year: "2023",
-    title: "Low-Emission Newbuilds",
-    description:
-      "Delivery of next-generation, low-emission vessels begins as part of Alpha's ongoing fleet renewal programme.",
-  },
-  {
-    year: "2025",
-    title: "Global Reach",
-    description:
-      "Alpha vessels and crews now operate across more than 37 countries, spanning every major offshore basin.",
-  },
-];
-
-const values = [
+const coreValues = [
   {
     icon: Compass,
-    title: "Our Vision",
-    description:
-      "To be the world's most trusted partner in offshore marine services, setting the standard for safety, innovation, and environmental responsibility across every basin we operate in.",
-  },
-  {
-    icon: Target,
-    title: "Our Mission",
-    description:
-      "To deliver reliable, high-performance marine support to the offshore energy industry — protecting our people, our clients' operations, and the marine environments we work in every day.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Safety & Integrity",
-    description:
-      "We hold ourselves to the highest standards of safety and ethical conduct, with zero compromise on the wellbeing of our crews and the integrity of our operations.",
+    title: "Ambition",
+    description: "We pursue progress and sustainable growth in everything we do.",
   },
   {
     icon: Users,
-    title: "Collaboration & Excellence",
-    description:
-      "We work as one team with our clients and partners, pursuing operational excellence and continuous improvement in everything we do.",
+    title: "Team Spirit",
+    description: "We work together with trust, respect, and shared responsibility.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "High Standards",
+    description: "We are committed to quality, professionalism, and operational excellence.",
   },
 ];
 
-const leadership = [
-  { name: "Alex Moreau", role: "Chief Executive Officer" },
-  { name: "Priya Nathan", role: "Chief Operating Officer" },
-  { name: "Erik Lindqvist", role: "Chief Financial Officer" },
-  { name: "Sofia Alvarenga", role: "Chief HSE Officer" },
-  { name: "David Okoye", role: "VP, Fleet & Technical Operations" },
-  { name: "Mei Lin Tan", role: "VP, Crew Transportation" },
+const commitments = [
+  {
+    icon: ShieldCheck,
+    title: "Ensure safety for all",
+  },
+  {
+    icon: Target,
+    title: "Act with ethics being compliant",
+  },
+  {
+    icon: Compass,
+    title: "Reduce our impact on environment",
+  },
+  {
+    icon: Users,
+    title: "Trust in people and develop talents",
+  },
 ];
 
 export default function AboutPage() {
@@ -105,7 +55,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About Us"
         title="About Alpha"
-        description="A global marine services group built on four decades of offshore expertise."
+        description="Bourbon Interoil Nigeria Limited — a trusted marine services and logistics provider supporting Nigeria's offshore energy industry."
       />
 
       {/* Company Profile */}
@@ -116,8 +66,8 @@ export default function AboutPage() {
               <Image
                 width={1200}
                 height={900}
-                src="/assets/crew-teamwork.jpg"
-                alt="Alpha crew working together"
+                src="/assets/about-company.jpg"
+                alt="Bourbon Interoil Nigeria Limited crew aboard a vessel"
                 className="w-full h-[420px] object-cover grayscale-[10%]"
               />
             </div>
@@ -126,22 +76,23 @@ export default function AboutPage() {
                 Our Story
               </p>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground">
-                Four decades of offshore expertise
+                Bourbon Interoil Nigeria Limited
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  For over 40 years, Alpha has supported the offshore energy
-                  industry with a modern fleet, deep technical expertise, and
-                  an unwavering commitment to safety. What began as a single
-                  regional operator has grown into a global marine services
-                  group spanning every major offshore basin.
+                  Bourbon Interoil Nigeria Limited (BINL) is a leading marine
+                  services and logistics provider incorporated in Nigeria in
+                  2004. We support the oil and gas industry with safe,
+                  reliable, and efficient offshore solutions while maintaining
+                  world-class operational standards.
                 </p>
                 <p>
-                  Today, our vessels and crews operate across more than 37
-                  countries, supporting marine logistics, crew transportation,
-                  and internal maritime training for the world&apos;s leading
-                  energy operators. We continue to invest in newer, cleaner tonnage
-                  and in the people who keep it running.
+                  Committed to Nigeria&apos;s local content development objectives,
+                  we invest in the training and development of Nigerian talent,
+                  the in-country construction of aluminium-hull vessels, and
+                  the engagement of local suppliers and service providers.
+                  Through these initiatives, we continue to create sustainable
+                  value for our clients, employees, and the Nigerian economy.
                 </p>
               </div>
             </div>
@@ -160,39 +111,45 @@ export default function AboutPage() {
               Our History
             </p>
             <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
-              Four Decades of Milestones
+              Our Growth and Evolution
             </h2>
             <p className="md:col-span-4 text-muted-foreground leading-relaxed">
-              Illustrative timeline shown for site design purposes only.
+              More than two decades of operational experience, local capacity
+              building, and sustainable growth in Nigeria.
             </p>
           </div>
 
-          <div className="border-t border-border">
-            {milestones.map((milestone, index) => (
-              <div
-                key={milestone.year}
-                className="grid md:grid-cols-12 gap-4 md:gap-6 items-start border-b border-border py-6"
-              >
-                <div className="md:col-span-1">
-                  <span className="font-serif text-lg text-brand">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                </div>
-                <div className="md:col-span-2">
-                  <p className="font-serif text-xl text-foreground">
-                    {milestone.year}
-                  </p>
-                </div>
-                <div className="md:col-span-3">
-                  <p className="font-medium text-foreground">
-                    {milestone.title}
-                  </p>
-                </div>
-                <div className="md:col-span-6 text-sm text-muted-foreground leading-relaxed">
-                  {milestone.description}
-                </div>
-              </div>
-            ))}
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 border-t border-border pt-10">
+            <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <p>
+                Over the years, BINL expanded its operational footprint,
+                developed a fleet of Nigerian-crewed vessels, and invested
+                significantly in local capacity building, becoming a key
+                contributor to Nigeria&apos;s maritime and offshore sectors.
+              </p>
+              <p>
+                Following the global restructuring of the Bourbon Group in
+                2020, BINL underwent strategic ownership and organizational
+                changes. In 2022, the Company&apos;s shareholding structure was
+                reconfigured to include Bourbon Mobility SAS, Evare Marine
+                Services Limited, and local management interests.
+              </p>
+            </div>
+            <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <p>
+                A significant milestone was reached in 2025 when Bourbon
+                Mobility SAS initiated the divestment of its 40% stake in BINL
+                to Global Streams Marine Limited (GSML), marking the beginning
+                of a new chapter in the Company&apos;s evolution while ensuring
+                continuity of operations and long-term growth in Nigeria.
+              </p>
+              <p>
+                Today, BINL remains a trusted offshore logistics partner,
+                leveraging over two decades of operational experience, a
+                skilled Nigerian workforce, and a strong commitment to safety,
+                operational excellence, and sustainable value creation.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -202,75 +159,94 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-12 gap-6 mb-16">
             <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
-              What Drives Us
+              Our Direction
             </p>
             <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
               Vision, Mission &amp; Values
             </h2>
             <p className="md:col-span-4 text-muted-foreground leading-relaxed">
-              The principles that guide every operation, every vessel, and
-              every decision we make.
+              The principles and commitments that guide BINL&apos;s operations
+              and relationships.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 border-t border-l border-border">
-            {values.map((value, index) => (
-              <div
-                key={value.title}
-                className="p-8 border-r border-b border-border"
-              >
-                <span className="font-serif text-lg text-brand">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <value.icon className="w-6 h-6 text-brand mt-4 mb-4" />
-                <h3 className="text-lg font-medium text-foreground mb-2">
-                  {value.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {value.description}
-                </p>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 mb-16">
+            <div className="border-t border-border pt-8">
+              <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-4">
+                Our Vision
+              </p>
+              <p className="text-lg text-foreground leading-relaxed">
+                Committed to supporting offshore energies development as a
+                reference partner, building sustainable and innovative
+                maritime solutions.
+              </p>
+            </div>
+            <div className="border-t border-border pt-8">
+              <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-4">
+                Our Mission
+              </p>
+              <p className="text-lg text-foreground leading-relaxed">
+                Develop a sustainable relationship with all stakeholders based
+                on trust and the quality of our services to provide safe,
+                reliable and cost-effective solutions in accordance with our
+                code of conduct and all applicable laws and regulations.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+            <div>
+              <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-6">
+                Our Core Values
+              </p>
+              <div className="border-t border-border">
+                {coreValues.map((value, index) => (
+                  <div
+                    key={value.title}
+                    className="group grid grid-cols-[2rem_2.5rem_1fr] gap-4 items-start border-b border-border py-7"
+                  >
+                    <span className="font-serif text-lg text-brand">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-brand transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground">
+                      <value.icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium text-foreground mb-2">
+                        {value.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {value.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* Leadership */}
-      <section
-        id="leadership"
-        className="py-24 scroll-mt-20 bg-secondary/60 border-y border-border"
-      >
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-12 gap-6 mb-16">
-            <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
-              Leadership
-            </p>
-            <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
-              Executive Team
-            </h2>
-            <p className="md:col-span-4 text-muted-foreground leading-relaxed">
-              Placeholder leadership profiles &mdash; illustrative names and
-              roles for site design purposes only.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-border">
-            {leadership.map((leader) => (
-              <div
-                key={leader.name}
-                className="border-r border-b border-border p-8 flex items-center gap-4 bg-background"
-              >
-                <div className="w-16 h-16 shrink-0 border border-border bg-muted flex items-center justify-center">
-                  <User className="w-7 h-7 text-muted-foreground" />
-                </div>
-                <div>
-                  <p className="font-medium text-foreground">{leader.name}</p>
-                  <p className="text-sm text-muted-foreground">
-                    {leader.role}
-                  </p>
-                </div>
+            <div>
+              <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-6">
+                Our Commitments
+              </p>
+              <div className="border-t border-border">
+                {commitments.map((commitment, index) => (
+                  <div
+                    key={commitment.title}
+                    className="group grid grid-cols-[2rem_2.5rem_1fr] gap-4 items-center border-b border-border py-7"
+                  >
+                    <span className="font-serif text-lg text-brand">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-brand transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground">
+                      <commitment.icon className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-lg font-medium text-foreground">
+                      {commitment.title}
+                    </h3>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>

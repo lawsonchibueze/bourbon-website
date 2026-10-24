@@ -7,38 +7,38 @@ const Fleet = () => {
     {
       image: "/assets/bour-10.jpeg",
       icon: Anchor,
-      type: "AHTS",
-      name: "Anchor Handling Tug Supply",
-      specs: "15,000+ BHP | 200+ Vessels",
+      type: "Surfer 1800 Series",
+      name: "Surfer 1800 Series",
+      specs: "25 Passengers | 30 Knots | 4-Ton Payload",
       description:
-        "Powerful vessels designed for anchor handling, towing operations, and platform positioning in the most demanding offshore environments.",
+        "Light craft designed for reliable offshore personnel transportation, with a Fi-Fi pump and monitor capacity of 300m³.",
     },
     {
       image: "/assets/bour-8.jpeg",
       icon: Ship,
-      type: "PSV",
-      name: "Platform Supply Vessels",
-      specs: "4,000+ DWT | 150+ Vessels",
+      type: "Surfer 25 Series",
+      name: "Surfer 25 Series",
+      specs: "70 Passengers | 30 Knots | 4-Ton Payload",
       description:
-        "Reliable supply chain solutions delivering cargo, equipment, and materials to offshore platforms with precision and efficiency.",
+        "A high-capacity light craft series built for efficient passenger transportation, with a cruising speed at full load of 23 knots.",
     },
     {
       image: "/assets/bour-4.jpeg",
       icon: Wind,
-      type: "Wind Farm",
-      name: "Renewable Energy Support",
-      specs: "SOV & CTV | 50+ Vessels",
+      type: "Surfer 2600 Series",
+      name: "Surfer 2600 Series",
+      specs: "50 Passengers | 30 Knots | 9-Ton Payload",
       description:
-        "Specialized vessels supporting the renewable energy sector with crew transfer and service operation capabilities for offshore wind farms.",
+        "A versatile light craft series with a 26-knot cruising speed at full load and a 600m³ / 10-bar Fi-Fi pump and monitor.",
     },
     {
       image: "/assets/crew-boat-27.jpg",
       icon: Ship,
-      type: "Crew Boats",
-      name: "Crew Boat Series",
-      specs: "50–70 Passengers | Up to 28 Knots",
+      type: "New Build Surfer 260X Series",
+      name: "New Build Surfer 260X Series",
+      specs: "50–70 Passengers | 32 Knots",
       description:
-        "Modern crew boats designed around passenger comfort, safety, technical reliability, and efficient offshore personnel transfers across a range of operating environments.",
+        "New-build crew boats designed to support efficient offshore passenger transportation with speed, reliability, and operational flexibility.",
     },
   ];
 

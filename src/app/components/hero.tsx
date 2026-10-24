@@ -22,18 +22,17 @@ const Hero = () => {
         <div className="container mx-auto px-4 pb-24">
           <div className="max-w-4xl animate-fade-in">
             <p className="text-sm tracking-[0.2em] uppercase text-surface-strong-foreground/70 mb-6 border-l-2 border-brand pl-4">
-              Alpha &mdash; Marine &amp; Offshore Services
+              Bourbon Interoil Nigeria Limited &mdash; Marine Services &amp; Logistics
             </p>
             <h1 className="font-serif text-5xl md:text-7xl font-medium text-surface-strong-foreground mb-6 leading-[1.05]">
-              &quot;Crew stories&quot;: the podcast that gives a voice to our
-              seafarers
+              Safe, Reliable, and Efficient Offshore Solutions
             </h1>
 
             {/* Description */}
             <p className="text-lg text-surface-strong-foreground/85 mb-10 max-w-2xl leading-relaxed">
-              Discover the untold stories of the men and women who navigate the
-              world&lsquo;s oceans, delivering essential services to offshore
-              energy operations.
+              We support Nigeria&apos;s oil and gas industry with safe, reliable,
+              and efficient offshore marine services while maintaining
+              world-class operational standards.
             </p>
 
             {/* CTA */}
