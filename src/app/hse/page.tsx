@@ -137,7 +137,7 @@ export default function HsePage() {
               <PracticeList practices={qualityPractices} />
             </div>
             <div className="relative overflow-hidden h-[420px] order-1 lg:order-2">
-              <Image width={1920} height={1280} src="/assets/qhse-quality.jpg" alt="Marine worker carrying out an operational inspection" className="w-full h-full object-cover" />
+              <Image width={1200} height={900} src="/assets/about-company.jpg" alt="Bourbon Interoil Nigeria Limited crew aboard a vessel" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

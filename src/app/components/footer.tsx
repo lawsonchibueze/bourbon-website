@@ -130,15 +130,7 @@ const Footer = () => {
                 <h4 className="text-xs tracking-[0.15em] uppercase font-medium mb-1 text-surface-strong-foreground/60">
                   Contact
                 </h4>
-                <p className="text-surface-strong-foreground/85 text-sm">
-                  Mobile: +234 8150893453
-                  <br />
-                  +234 9169827730
-                  <br />
-                  IP Phone (DID): 02013301335
-                  <br />
-                  Ext: 23493
-                </p>
+                <p className="text-surface-strong-foreground/85 text-sm" aria-label="Phone number pending" />
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -148,7 +140,7 @@ const Footer = () => {
                   Email
                 </h4>
                 <p className="text-surface-strong-foreground/85 text-sm">
-                  Unyimeabasi.nelsonjames@bourbon-interoil.com
+                  binl@bourbon-interoil.com
                 </p>
               </div>
             </div>

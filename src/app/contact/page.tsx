@@ -10,12 +10,16 @@ import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
 
 const locations = [
-  { city: "Marseille", country: "France", role: "Group Headquarters" },
-  { city: "Houston", country: "United States", role: "Americas Region" },
-  { city: "Aberdeen", country: "United Kingdom", role: "North Sea Region" },
-  { city: "Singapore", country: "Singapore", role: "Asia-Pacific Region" },
-  { city: "Rio de Janeiro", country: "Brazil", role: "South America Region" },
-  { city: "Lagos", country: "Nigeria", role: "West Africa Region" },
+  {
+    city: "Lagos",
+    country: "Nigeria",
+    role: "Head Office — 16C Lugard Avenue, Ikoyi",
+  },
+  {
+    city: "Port Harcourt",
+    country: "Nigeria",
+    role: "Operations Office — Amadi Base, NLNG Road",
+  },
 ];
 
 export default function ContactPage() {
@@ -52,9 +56,18 @@ export default function ContactPage() {
                     Head Office
                   </h3>
                   <p className="text-foreground leading-relaxed">
-                    50, Rue de Forbin - CS 60703 -13235
-                    <br />
-                    Marseille Cedex 02 - France
+                    16C Lugard Avenue, Ikoyi, Lagos
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <MapPin className="w-5 h-5 text-brand mt-1 shrink-0" />
+                <div>
+                  <h3 className="text-xs tracking-[0.15em] uppercase font-medium mb-2 text-muted-foreground">
+                    Operations Office
+                  </h3>
+                  <p className="text-foreground leading-relaxed">
+                    Amadi Base, NLNG Road, Port Harcourt
                   </p>
                 </div>
               </div>
@@ -73,7 +86,7 @@ export default function ContactPage() {
                   <h3 className="text-xs tracking-[0.15em] uppercase font-medium mb-2 text-muted-foreground">
                     Email
                   </h3>
-                  <p className="text-foreground">contact@alpha-offshore.com</p>
+                  <p className="text-foreground">binl@bourbon-interoil.com</p>
                 </div>
               </div>
             </div>
@@ -191,14 +204,14 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-12 gap-6 mb-16">
             <p className="md:col-span-2 text-sm tracking-[0.2em] uppercase text-muted-foreground">
-              Global Presence
+              Our Offices
             </p>
             <h2 className="md:col-span-6 font-serif text-4xl md:text-5xl text-foreground">
-              Office Locations
+              Office Locations in Nigeria
             </h2>
             <p className="md:col-span-4 text-muted-foreground leading-relaxed">
-              Regional offices supporting operations across every major
-              offshore basin.
+              Our head office and operations office supporting BINL&apos;s marine
+              services and logistics activities in Nigeria.
             </p>
           </div>
 
@@ -251,10 +264,10 @@ export default function ContactPage() {
               <p className="text-muted-foreground leading-relaxed max-w-xl">
                 Reach our business development team directly at{" "}
                 <a
-                  href="mailto:business@alpha-offshore.com"
+                  href="mailto:binl@bourbon-interoil.com"
                   className="text-brand font-medium"
                 >
-                  business@alpha-offshore.com
+                  binl@bourbon-interoil.com
                 </a>
                 .
               </p>

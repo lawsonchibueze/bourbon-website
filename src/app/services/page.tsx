@@ -17,7 +17,7 @@ const services = [
   {
     id: "marine",
     title: "Marine Logistics",
-    image: "/assets/marine-logistics.jpg",
+    image: "/assets/crew-boat-26.jpg",
     description:
       "Comprehensive offshore support vessel services including supply, anchor handling, and platform support for the global energy industry. Our fleet operates around the clock to keep offshore installations supplied, secured, and moving.",
     capabilities: [
@@ -33,7 +33,7 @@ const services = [
   {
     id: "crew",
     title: "Crew Transportation",
-    image: "/assets/passenger-mobility.jpg",
+    image: "/assets/crew-boat-21.jpg",
     description:
       "Safe and efficient crew transfer services connecting offshore installations with onshore facilities across the globe, engineered around comfort, punctuality, and safety at every handover.",
     capabilities: [

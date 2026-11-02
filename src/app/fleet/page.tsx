@@ -17,7 +17,7 @@ const vesselCategories = [
     icon: Anchor,
     type: "AHTS",
     name: "Anchor Handling Tug Supply",
-    image: "/assets/fleet-ahts.jpg",
+    image: "/assets/crew-boat-27.jpg",
     description:
       "Powerful, high-bollard-pull vessels purpose-built for anchor handling, towing operations, and platform positioning in the most demanding offshore environments. Our AHTS fleet combines dynamic positioning with heavy-duty winch systems to support rig moves, mooring installations, and emergency towage on short notice.",
     capabilities: [
@@ -36,7 +36,7 @@ const vesselCategories = [
     icon: Ship,
     type: "PSV",
     name: "Platform Supply Vessels",
-    image: "/assets/fleet-psv.jpg",
+    image: "/assets/crew-boat-25.jpg",
     description:
       "Reliable supply chain vessels delivering bulk cargo, drilling fluids, and deck freight to offshore platforms with precision and efficiency. Our PSV fleet runs scheduled and on-demand resupply rotations, keeping installations stocked with fuel, water, mud, and equipment around the clock.",
     capabilities: [
@@ -55,7 +55,7 @@ const vesselCategories = [
     icon: Wind,
     type: "Wind Farm",
     name: "Renewable Energy Support",
-    image: "/assets/fleet-wind.jpg",
+    image: "/assets/crew-boat-19.jpg",
     description:
       "Specialized Service Operation Vessels (SOV) and Crew Transfer Vessels (CTV) supporting the renewable energy sector, engineered for safe crew transfer and long-duration service operations at offshore wind farms. Motion-compensated access systems keep technicians moving between vessel and turbine in a wider weather window.",
     capabilities: [
