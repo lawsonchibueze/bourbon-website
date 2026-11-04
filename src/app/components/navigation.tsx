@@ -32,8 +32,7 @@ const Navigation = () => {
       label: "Fleet",
       href: "/fleet",
       items: [
-        { label: "Vessel Categories", href: "/fleet#categories" },
-        { label: "Fleet Capabilities", href: "/fleet#capabilities" },
+        { label: "Crew Boat Series", href: "/fleet#crew-boats" },
       ],
     },
     {
