@@ -3,13 +3,6 @@ import ServiceCard from "./serviceCard";
 const Services = () => {
   const services = [
     {
-      image: "/assets/marine-logistics.jpg",
-      title: "Marine Logistics",
-      description:
-        "Reliable personnel transportation between shore bases, offshore locations, platforms, barges, and vessels.",
-      link: "/services#marine",
-    },
-    {
       image: "/assets/passenger-mobility.jpg",
       title: "Passenger Transportation",
       description:

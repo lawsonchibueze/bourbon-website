@@ -8,7 +8,7 @@ import PageHeader from "../components/page-header";
 export const metadata: Metadata = {
   title: "About Us | Alpha",
   description:
-    "The Bourbon Interoil Nigeria Limited story, history, vision, mission, values, and commitments in Nigeria's offshore marine sector.",
+    "The Alpha Interoil story, history, vision, mission, values, and commitments in Nigeria's offshore marine sector.",
 };
 
 const coreValues = [
@@ -55,7 +55,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About Us"
         title="About Alpha"
-        description="Bourbon Interoil Nigeria Limited — a trusted marine services and logistics provider supporting Nigeria's offshore energy industry."
+        description="Alpha Interoil — a trusted marine services and logistics provider supporting Nigeria's offshore energy industry."
       />
 
       {/* Company Profile */}
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 width={1200}
                 height={900}
                 src="/assets/about-company.jpg"
-                alt="Bourbon Interoil Nigeria Limited crew aboard a vessel"
+                alt="Alpha Interoil crew aboard a vessel"
                 className="w-full h-[420px] object-cover grayscale-[10%]"
               />
             </div>
@@ -76,11 +76,11 @@ export default function AboutPage() {
                 Our Story
               </p>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground">
-                Bourbon Interoil Nigeria Limited
+                Alpha Interoil
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Bourbon Interoil Nigeria Limited (BINL) is a leading marine
+                  Alpha Interoil is a leading marine
                   services and logistics provider incorporated in Nigeria in
                   2004. We support the oil and gas industry with safe,
                   reliable, and efficient offshore solutions while maintaining
@@ -122,14 +122,14 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 border-t border-border pt-10">
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                Over the years, BINL expanded its operational footprint,
+                Over the years, Alpha Interoil expanded its operational footprint,
                 developed a fleet of Nigerian-crewed vessels, and invested
                 significantly in local capacity building, becoming a key
                 contributor to Nigeria&apos;s maritime and offshore sectors.
               </p>
               <p>
                 Following the global restructuring of the Bourbon Group in
-                2020, BINL underwent strategic ownership and organizational
+                2020, Alpha Interoil underwent strategic ownership and organizational
                 changes. In 2022, the Company&apos;s shareholding structure was
                 reconfigured to include Bourbon Mobility SAS, Evare Marine
                 Services Limited, and local management interests.
@@ -138,13 +138,13 @@ export default function AboutPage() {
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
                 A significant milestone was reached in 2025 when Bourbon
-                Mobility SAS initiated the divestment of its 40% stake in BINL
+                Mobility SAS initiated the divestment of its 40% stake in Alpha Interoil
                 to Global Streams Marine Limited (GSML), marking the beginning
                 of a new chapter in the Company&apos;s evolution while ensuring
                 continuity of operations and long-term growth in Nigeria.
               </p>
               <p>
-                Today, BINL remains a trusted offshore logistics partner,
+                Today, Alpha Interoil remains a trusted offshore logistics partner,
                 leveraging over two decades of operational experience, a
                 skilled Nigerian workforce, and a strong commitment to safety,
                 operational excellence, and sustainable value creation.
@@ -165,7 +165,7 @@ export default function AboutPage() {
               Vision, Mission &amp; Values
             </h2>
             <p className="md:col-span-4 text-muted-foreground leading-relaxed">
-              The principles and commitments that guide BINL&apos;s operations
+              The principles and commitments that guide Alpha Interoil&apos;s operations
               and relationships.
             </p>
           </div>

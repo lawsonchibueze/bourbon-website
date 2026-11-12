@@ -15,22 +15,6 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    id: "marine",
-    title: "Marine Logistics",
-    image: "/assets/crew-boat-26.jpg",
-    description:
-      "Comprehensive offshore support vessel services including supply, anchor handling, and platform support for the global energy industry. Our fleet operates around the clock to keep offshore installations supplied, secured, and moving.",
-    capabilities: [
-      "Anchor handling, towing & platform positioning",
-      "Platform supply & bulk cargo runs",
-      "Offshore logistics planning & scheduling",
-      "24/7 emergency response readiness",
-    ],
-    stats: [
-      { value: "34", label: "Vessels in service" },
-    ],
-  },
-  {
     id: "crew",
     title: "Crew Transportation",
     image: "/assets/crew-boat-21.jpg",

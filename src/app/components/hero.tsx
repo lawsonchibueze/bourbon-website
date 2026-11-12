@@ -22,7 +22,7 @@ const Hero = () => {
         <div className="container mx-auto px-4 pb-24">
           <div className="max-w-4xl animate-fade-in">
             <p className="text-sm tracking-[0.2em] uppercase text-surface-strong-foreground/70 mb-6 border-l-2 border-brand pl-4">
-              Bourbon Interoil Nigeria Limited &mdash; Marine Services &amp; Logistics
+              Alpha Interoil &mdash; Marine Services &amp; Logistics
             </p>
             <h1 className="font-serif text-5xl md:text-7xl font-medium text-surface-strong-foreground mb-6 leading-[1.05]">
               Safe, Reliable, and Efficient Offshore Solutions

@@ -210,7 +210,7 @@ export default function ContactPage() {
               Office Locations in Nigeria
             </h2>
             <p className="md:col-span-4 text-muted-foreground leading-relaxed">
-              Our head office and operations office supporting BINL&apos;s marine
+              Our head office and operations office supporting Alpha Interoil&apos;s marine
               services and logistics activities in Nigeria.
             </p>
           </div>

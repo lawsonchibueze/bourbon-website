@@ -24,7 +24,7 @@ const CompanyOverview = () => {
               Four decades of offshore expertise
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Bourbon Interoil Nigeria Limited (BINL) is a leading marine
+              Alpha Interoil is a leading marine
               services and logistics provider incorporated in Nigeria in 2004.
               We support the oil and gas industry with safe, reliable, and
               efficient offshore solutions while maintaining world-class

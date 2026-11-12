@@ -66,7 +66,7 @@ export default function HsePage() {
               Protecting People. Preserving the Environment. Delivering Excellence.
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              At Bourbon Interoil Nigeria Limited, Quality, Health, Safety and
+              At Alpha Interoil, Quality, Health, Safety and
               Environment are fundamental to how we operate and deliver marine
               logistics services. In an industry where the safe transportation
               of personnel offshore is critical, we are committed to preventing
@@ -122,7 +122,7 @@ export default function HsePage() {
               <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Quality Management</p>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground">Reliable Operations. Consistent Service. Lasting Client Confidence.</h2>
               <p className="text-muted-foreground leading-relaxed">
-                At Bourbon Interoil Nigeria Limited, quality means delivering
+                At Alpha Interoil, quality means delivering
                 marine logistics services that consistently meet client
                 requirements, applicable regulations, and established
                 operational standards. We recognise that reliable service
@@ -137,7 +137,7 @@ export default function HsePage() {
               <PracticeList practices={qualityPractices} />
             </div>
             <div className="relative overflow-hidden h-[420px] order-1 lg:order-2">
-              <Image width={1200} height={900} src="/assets/about-company.jpg" alt="Bourbon Interoil Nigeria Limited crew aboard a vessel" className="w-full h-full object-cover" />
+              <Image width={1200} height={900} src="/assets/about-company.jpg" alt="Alpha Interoil crew aboard a vessel" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

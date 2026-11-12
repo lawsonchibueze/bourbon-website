@@ -13,7 +13,6 @@ import AlphaMark from "./alpha-mark";
 const Footer = () => {
   const footerLinks = {
     Services: [
-      { label: "Marine Logistics", href: "/services#marine" },
       { label: "Crew Transportation", href: "/services#crew" },
       { label: "Training & Development", href: "/services#training" },
     ],

@@ -17,7 +17,7 @@ const HseHighlights = () => {
               Protecting People. Preserving the Environment. Delivering Excellence.
             </h2>
             <p className="mt-8 text-muted-foreground leading-relaxed max-w-2xl">
-              At Bourbon Interoil Nigeria Limited, Quality, Health, Safety and
+              At Alpha Interoil, Quality, Health, Safety and
               Environment are fundamental to how we operate and deliver marine
               logistics services. In an industry where the safe transportation
               of personnel offshore is critical, we are committed to

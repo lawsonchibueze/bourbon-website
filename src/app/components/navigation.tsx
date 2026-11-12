@@ -23,7 +23,6 @@ const Navigation = () => {
       label: "Services",
       href: "/services",
       items: [
-        { label: "Marine Logistics", href: "/services#marine" },
         { label: "Crew Transportation", href: "/services#crew" },
         { label: "Training & Development", href: "/services#training" },
       ],
