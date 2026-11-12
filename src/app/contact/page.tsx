@@ -86,7 +86,7 @@ export default function ContactPage() {
                   <h3 className="text-xs tracking-[0.15em] uppercase font-medium mb-2 text-muted-foreground">
                     Email
                   </h3>
-                  <p className="text-foreground">binl@alpha-interoil.com</p>
+                  <p className="text-foreground">alpha-interoil.com</p>
                 </div>
               </div>
             </div>
@@ -263,12 +263,9 @@ export default function ContactPage() {
               </p>
               <p className="text-muted-foreground leading-relaxed max-w-xl">
                 Reach our business development team directly at{" "}
-                <a
-                  href="mailto:binl@alpha-interoil.com"
-                  className="text-brand font-medium"
-                >
-                  binl@alpha-interoil.com
-                </a>
+                <span className="text-brand font-medium">
+                  alpha-interoil.com
+                </span>
                 .
               </p>
             </div>

@@ -139,7 +139,7 @@ const Footer = () => {
                   Email
                 </h4>
                 <p className="text-surface-strong-foreground/85 text-sm">
-                  binl@alpha-interoil.com
+                  alpha-interoil.com
                 </p>
               </div>
             </div>
