@@ -21,7 +21,7 @@ const CompanyOverview = () => {
               Who We Are
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground">
-              Four decades of offshore expertise
+              Two decades of offshore expertise
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Alpha Interoil is a leading marine

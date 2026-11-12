@@ -147,7 +147,7 @@ export default function HsePage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative overflow-hidden h-[420px]">
-              <Image width={1824} height={1366} src="/assets/qhse-environment.jpg" alt="Vessel operating responsibly in the marine environment" className="w-full h-full object-cover" />
+              <Image width={1200} height={900} src="/assets/bour-1.jpeg" alt="Vessel operating responsibly in the marine environment" className="w-full h-full object-cover" />
             </div>
             <div className="space-y-6">
               <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Environment Management</p>
