@@ -30,18 +30,20 @@ function MessageText({ text }: { text: string }) {
 
 export default function SiteAssistant() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isRendered, setIsRendered] = useState(false);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: 0,
       role: "assistant",
-      text: "Hello. Ask me about Alpha Interoil’s services, fleet, training, or QHSE information.",
+      text: "Hello. Ask me about Alpha Interoil's services, fleet, training, or QHSE information.",
     },
   ]);
   const nextMessageId = useRef(1);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
@@ -50,6 +52,21 @@ export default function SiteAssistant() {
   useEffect(() => {
     if (isOpen) inputRef.current?.focus();
   }, [isOpen]);
+
+  useEffect(() => () => {
+    if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
+  }, []);
+
+  function openPanel() {
+    if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
+    setIsRendered(true);
+    setIsOpen(true);
+  }
+
+  function closePanel() {
+    setIsOpen(false);
+    closeTimerRef.current = setTimeout(() => setIsRendered(false), 200);
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -75,7 +92,7 @@ export default function SiteAssistant() {
         {
           id: nextMessageId.current++,
           role: "assistant",
-          text: data.answer || data.error || "I couldn’t answer that just now. Please try again.",
+          text: data.answer || data.error || "I couldn't answer that just now. Please try again.",
         },
       ]);
     } catch {
@@ -84,7 +101,7 @@ export default function SiteAssistant() {
         {
           id: nextMessageId.current++,
           role: "assistant",
-          text: "I’m having trouble connecting. Please try again or use the Contact page.",
+          text: "I'm having trouble connecting. Please try again or use the Contact page.",
         },
       ]);
     } finally {
@@ -94,86 +111,89 @@ export default function SiteAssistant() {
 
   return (
     <>
-      {isOpen && (
-        <section
-          aria-label="Alpha Interoil assistant"
-          className="fixed bottom-24 right-4 z-[60] flex h-[min(560px,calc(100dvh-8rem))] w-[min(400px,calc(100vw-2rem))] flex-col overflow-hidden border border-border bg-background shadow-2xl sm:right-6"
-        >
-          <header className="flex items-center justify-between bg-surface-strong px-5 py-4 text-surface-strong-foreground">
-            <div className="flex items-center gap-3">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-brand-foreground">
-                <Bot className="h-5 w-5" aria-hidden="true" />
-              </span>
-              <div>
-                <h2 className="font-medium">Alpha Assistant</h2>
-                <p className="text-xs text-surface-strong-foreground/70">Company information</p>
-              </div>
+      {isRendered && <section
+        aria-label="Alpha Interoil assistant"
+        aria-hidden={!isOpen}
+        className={`fixed bottom-24 right-4 z-[60] flex h-[min(560px,calc(100dvh-8rem))] w-[min(400px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border border-border bg-background shadow-2xl sm:right-6 ${
+          isOpen ? "assistant-panel-enter" : "pointer-events-none assistant-panel-exit"
+        }`}
+      >
+        <header className="flex items-center justify-between rounded-t-xl bg-surface-strong px-5 py-4 text-surface-strong-foreground">
+          <div className="flex items-center gap-3">
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-brand-foreground">
+              <Bot className="h-5 w-5" aria-hidden="true" />
+            </span>
+            <div>
+              <h2 className="font-medium">Alpha Assistant</h2>
+              <p className="text-xs text-surface-strong-foreground/70">Company information</p>
             </div>
-            <button
-              type="button"
-              onClick={() => setIsOpen(false)}
-              aria-label="Close assistant"
-              className="rounded p-2 hover:bg-surface-strong-foreground/10"
-            >
-              <X className="h-5 w-5" aria-hidden="true" />
-            </button>
-          </header>
-
-          <div ref={scrollRef} className="flex-1 space-y-4 overflow-y-auto p-4" aria-live="polite">
-            {messages.map((message) => (
-              <div
-                key={message.id}
-                className={`max-w-[88%] whitespace-pre-wrap rounded-lg px-4 py-3 text-sm leading-relaxed ${
-                  message.role === "user"
-                    ? "ml-auto bg-brand text-brand-foreground"
-                    : "mr-auto border border-border bg-secondary text-foreground"
-                }`}
-              >
-                <MessageText text={message.text} />
-              </div>
-            ))}
-            {isLoading && (
-              <div className="mr-auto flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-muted-foreground">
-                <LoaderCircle className="h-4 w-4 animate-spin" aria-hidden="true" />
-                Looking that up…
-              </div>
-            )}
           </div>
+          <button
+            type="button"
+            onClick={closePanel}
+            aria-label="Close assistant"
+            className="rounded-lg p-2 transition-colors hover:bg-surface-strong-foreground/10"
+          >
+            <X className="h-5 w-5" aria-hidden="true" />
+          </button>
+        </header>
 
-          <form onSubmit={handleSubmit} className="flex items-center gap-2 border-t border-border p-3">
-            <label htmlFor="assistant-question" className="sr-only">Ask a question</label>
-            <input
-              ref={inputRef}
-              id="assistant-question"
-              value={input}
-              onChange={(event) => setInput(event.target.value)}
-              maxLength={1200}
-              placeholder="Ask about the company…"
-              className="h-11 min-w-0 flex-1 rounded-md border border-input bg-background px-3 text-sm text-foreground outline-none placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring"
-            />
-            <button
-              type="submit"
-              disabled={!input.trim() || isLoading}
-              aria-label="Send question"
-              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-brand text-brand-foreground disabled:cursor-not-allowed disabled:opacity-50"
+        <div ref={scrollRef} className="flex-1 space-y-4 overflow-y-auto p-4" aria-live="polite">
+          {messages.map((message) => (
+            <div
+              key={message.id}
+              className={`max-w-[88%] whitespace-pre-wrap rounded-xl px-4 py-3 text-sm leading-relaxed ${
+                message.role === "user"
+                  ? "ml-auto rounded-br-sm bg-brand text-brand-foreground"
+                  : "mr-auto rounded-bl-sm border border-border bg-secondary text-foreground"
+              }`}
             >
-              <Send className="h-4 w-4" aria-hidden="true" />
-            </button>
-          </form>
-          <p className="px-4 pb-3 text-center text-[11px] text-muted-foreground">
-            Answers use information published on this website.
-          </p>
-        </section>
-      )}
+              <MessageText text={message.text} />
+            </div>
+          ))}
+          {isLoading && (
+            <div className="mr-auto flex items-center gap-2 rounded-xl rounded-bl-sm border border-border bg-secondary px-4 py-3 text-sm text-muted-foreground">
+              <LoaderCircle className="h-4 w-4 animate-spin" aria-hidden="true" />
+              Searching the company information...
+            </div>
+          )}
+        </div>
+
+        <form onSubmit={handleSubmit} className="flex items-center gap-2 border-t border-border p-3">
+          <label htmlFor="assistant-question" className="sr-only">Ask a question</label>
+          <input
+            ref={inputRef}
+            id="assistant-question"
+            value={input}
+            onChange={(event) => setInput(event.target.value)}
+            maxLength={1200}
+            placeholder="Ask about the company..."
+            className="h-11 min-w-0 flex-1 rounded-lg border border-input bg-background px-3 text-sm text-foreground outline-none placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring"
+          />
+          <button
+            type="submit"
+            disabled={!input.trim() || isLoading}
+            aria-label="Send question"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand text-brand-foreground transition-colors hover:bg-brand/90 disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            <Send className="h-4 w-4" aria-hidden="true" />
+          </button>
+        </form>
+        <p className="px-4 pb-3 text-center text-[11px] text-muted-foreground">
+          Answers use information published on this website.
+        </p>
+      </section>}
 
       <button
         type="button"
-        onClick={() => setIsOpen((open) => !open)}
+        onClick={isOpen ? closePanel : openPanel}
         aria-label={isOpen ? "Close Alpha assistant" : "Open Alpha assistant"}
         aria-expanded={isOpen}
-        className="fixed bottom-5 right-4 z-[60] flex h-14 items-center gap-2 rounded-full bg-brand px-5 text-sm font-medium text-brand-foreground shadow-lg transition-transform hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:right-6"
+        className="fixed bottom-5 right-4 z-[60] flex h-14 items-center gap-2 rounded-full bg-brand px-5 text-sm font-medium text-brand-foreground shadow-lg transition-transform duration-200 hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 motion-reduce:transition-none sm:right-6"
       >
-        {isOpen ? <X className="h-5 w-5" aria-hidden="true" /> : <MessageCircle className="h-5 w-5" aria-hidden="true" />}
+        <span className="transition-transform duration-200 motion-reduce:transition-none">
+          {isOpen ? <X className="h-5 w-5" aria-hidden="true" /> : <MessageCircle className="h-5 w-5" aria-hidden="true" />}
+        </span>
         <span>{isOpen ? "Close" : "Ask Alpha"}</span>
       </button>
     </>
