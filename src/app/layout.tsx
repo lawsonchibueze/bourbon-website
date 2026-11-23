@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Fraunces } from "next/font/google";
 import { ThemeProvider } from "./components/theme-provider";
 import ScrollReveal from "./components/scroll-reveal";
+import SiteAssistant from "./components/site-assistant";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -40,6 +41,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <ScrollReveal />
           {children}
+          <SiteAssistant />
         </ThemeProvider>
       </body>
     </html>

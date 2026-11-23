@@ -1,37 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alpha Interoil website
 
-## Getting Started
+Next.js website for Alpha Interoil, including a local company information assistant.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Website assistant
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The assistant searches `knowledge/alpha-interoil.md` locally through the Next.js server route at `/api/chat`. It returns matching source text and website links. If it cannot find a relevant passage, it directs visitors to `/contact`.
 
-## Learn More
+This version does not call OpenAI or another external AI service and does not require an API key or vector store. Its replies are excerpts from the source, so phrasing and matching are more limited than a language model.
 
-To learn more about Next.js, take a look at the following resources:
+### Refresh the knowledge file
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Start the local website, then in another terminal run:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run crawl:site
+```
 
-## Deploy on Vercel
+The crawler visits the site's main pages on `http://localhost:3000`, extracts visible section text, and rebuilds `knowledge/alpha-interoil.md` with source paths. To crawl another running instance, set `SITE_BASE_URL` to its base URL before running the command.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# bourbon-website
+- `npm run dev` — start the development server.
+- `npm run build` — create a production build.
+- `npm run start` — start the production server.
+- `npm run lint` — run ESLint.
+- `npm run crawl:site` — crawl the running website and refresh its local knowledge file.
