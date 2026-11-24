@@ -85,6 +85,7 @@ export default function SiteAssistant() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: question }),
+        signal: AbortSignal.timeout(25_000),
       });
       const data = (await response.json()) as { answer?: string; error?: string };
       setMessages((current) => [
@@ -101,7 +102,7 @@ export default function SiteAssistant() {
         {
           id: nextMessageId.current++,
           role: "assistant",
-          text: "I'm having trouble connecting. Please try again or use the Contact page.",
+          text: "The assistant is taking longer than expected. Please try again or use the Contact page.",
         },
       ]);
     } finally {

@@ -7,9 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "crawl:site": "node scripts/crawl-site.mjs"
+    "crawl:site": "node scripts/crawl-site.mjs",
+    "sync:knowledge": "node scripts/sync-gemini-knowledge.mjs",
+    "refresh:knowledge": "npm run crawl:site && npm run sync:knowledge"
   },
   "dependencies": {
+    "@google/genai": "^3.6.1",
     "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
