@@ -8,8 +8,8 @@ const Hero = () => {
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <Image
-          src="/assets/hero-ocean.jpg"
-          alt="Offshore support vessel at sea"
+          src="/assets/hero-fleet.webp"
+          alt="Aerial view of offshore support vessels moored along a harbor dock"
           fill
           priority
           className="w-full h-full object-cover"

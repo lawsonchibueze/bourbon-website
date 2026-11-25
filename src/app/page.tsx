@@ -2,6 +2,7 @@ import CTABanner from "./components/ctaBanner";
 import CompanyOverview from "./components/companyOverview";
 import Excellence from "./components/excelence";
 import Fleet from "./components/fleet";
+import FleetAerialGallery from "./components/fleet-aerial-gallery";
 import Footer from "./components/footer";
 import Hero from "./components/hero";
 import HseHighlights from "./components/hseHighlights";
@@ -19,6 +20,7 @@ export default function Home() {
       <CompanyOverview />
       <Services />
       <Stats />
+      <FleetAerialGallery />
       <Excellence />
       <Fleet />
       <HseHighlights />
